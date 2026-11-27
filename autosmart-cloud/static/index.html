@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoSmart Cloud — ML, Blockchain & Ciberseguridad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body { background: #09090b; color: #f4f4f5; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .glass-card {
+      background: rgba(24, 24, 27, 0.85);
+      border: 1px solid rgba(63, 63, 70, 0.7);
+      backdrop-filter: blur(12px);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(239, 68, 68, 0.55);
+      box-shadow: 0 12px 30px -10px rgba(220, 38, 38, 0.25);
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+      color: #fff;
+      border-color: #ef4444;
+    }
+    .hash-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- ================= VISTA PÚBLICA LIVE TRACKER (CUANDO ENTRAN POR QR) ================= -->
+  <div id="public-tracker-view" class="hidden min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950/30">
+    <div class="glass-card max-w-xl w-full rounded-2xl p-8">
+      <div class="flex items-center justify-between border-b border-zinc-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-red-400 font-bold">AutoSmart Live Tracker</span>
+          <h1 class="text-2xl font-extrabold text-white mt-1" id="pt-codigo">ORD-...</h1>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">En Tiempo Real</span>
+      </div>
+      <div class="grid grid-cols-2 gap-4 text-sm mb-6">
+        <div class="bg-zinc-900/90 p-3 rounded-xl border border-zinc-800">
+          <p class="text-zinc-400 text-xs">Vehículo / Placa</p>
+          <p class="font-bold text-white" id="pt-vehiculo">—</p>
+        </div>
+        <div class="bg-zinc-900/90 p-3 rounded-xl border border-zinc-800">
+          <p class="text-zinc-400 text-xs">Cliente (Protegido Ley 29733)</p>
+          <p class="font-bold text-white" id="pt-cliente">—</p>
+        </div>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs uppercase tracking-wider text-zinc-400 mb-3 font-semibold">Progreso del Servicio</p>
+        <div id="pt-steps" class="grid grid-cols-5 gap-2 text-center text-xs"></div>
+      </div>
+      <div class="bg-zinc-900/90 p-4 rounded-xl border border-zinc-800 mb-6">
+        <p class="text-xs text-zinc-400 mb-1">Diagnóstico Técnico Actual</p>
+        <p class="text-sm text-zinc-100" id="pt-diagnostico">—</p>
+      </div>
+      <button onclick="cerrarTrackerPublico()" class="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-sm font-semibold transition">
+        Volver al Portal del Taller
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= PANTALLA DE LOGIN (CIBERSEGURIDAD RBAC + BCRYPT) ================= -->
+  <div id="login-view" class="min-h-screen flex items-center justify-center p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-950/40 via-zinc-950 to-zinc-950">
+    <div class="glass-card max-w-md w-full rounded-2xl p-8">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-red-600/20 border border-red-500/40 text-red-400 font-black text-2xl mb-3">AS</div>
+        <h1 class="text-2xl font-extrabold tracking-tight">AutoSmart <span class="text-red-500">Cloud</span></h1>
+        <p class="text-xs text-zinc-400 mt-1">Machine Learning • Supabase Cloud • Blockchain • Ciberseguridad</p>
+      </div>
+
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1">Correo Electrónico</label>
+          <input id="login-email" type="email" required value="admin@autosmart.pe"
+            class="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-red-500 focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1">Contraseña (Verificada con bcrypt)</label>
+          <input id="login-password" type="password" required value="Admin2026!"
+            class="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-red-500 focus:outline-none text-sm" />
+        </div>
+        <div id="login-error" class="hidden text-xs text-red-400 bg-red-950/50 border border-red-800 rounded-lg p-2.5"></div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 font-bold text-sm transition shadow-lg shadow-red-900/30">
+          Iniciar Sesión Segura (JWT)
+        </button>
+      </form>
+
+      <div class="mt-6 pt-5 border-t border-zinc-800">
+        <p class="text-[11px] text-zinc-400 text-center mb-2.5 uppercase tracking-wider font-semibold">Accesos rápidos de demostración (RBAC)</p>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <button onclick="fillLogin('admin@autosmart.pe','Admin2026!')" class="py-2 px-2 rounded-lg bg-red-950/50 hover:bg-red-900/60 border border-red-800/60 text-red-200 font-semibold transition">Jefe Admin</button>
+          <button onclick="fillLogin('mecanico@autosmart.pe','Mecanico2026!')" class="py-2 px-2 rounded-lg bg-blue-950/50 hover:bg-blue-900/60 border border-blue-800/60 text-blue-200 font-semibold transition">Mecánico</button>
+          <button onclick="fillLogin('recepcion@autosmart.pe','Recepcion2026!')" class="py-2 px-2 rounded-lg bg-emerald-950/50 hover:bg-emerald-900/60 border border-emerald-800/60 text-emerald-200 font-semibold transition">Recepción</button>
+          <button onclick="fillLogin('cliente@autosmart.pe','Cliente2026!')" class="py-2 px-2 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 border border-amber-800/60 text-amber-200 font-semibold transition">Cliente</button>
+        </div>
+        <button onclick="abrirModalRegistro()" class="w-full mt-3 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-xs text-zinc-100 font-bold transition">
+          + Crear nueva cuenta de Cliente
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL REGISTRO DE NUEVO CLIENTE ================= -->
+  <div id="register-modal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-2xl p-6">
+      <h3 class="font-extrabold text-lg mb-1">Registro de Nuevo Cliente</h3>
+      <p class="text-xs text-zinc-400 mb-4">Tu contraseña se cifrará con bcrypt antes de guardarse en Supabase.</p>
+      <form id="register-form" class="space-y-3 text-xs">
+        <div>
+          <label class="text-zinc-400 block mb-1">Nombre completo</label>
+          <input id="reg-nombre" type="text" required minlength="3" placeholder="Ej: Juan Pérez López"
+            class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-red-500 focus:outline-none" />
+        </div>
+        <div>
+          <label class="text-zinc-400 block mb-1">Correo electrónico</label>
+          <input id="reg-email" type="email" required placeholder="Ej: juan@correo.com"
+            class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-red-500 focus:outline-none" />
+        </div>
+        <div>
+          <label class="text-zinc-400 block mb-1">Contraseña (mínimo 6 caracteres)</label>
+          <input id="reg-pass" type="password" required minlength="6" placeholder="••••••••"
+            class="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-red-500 focus:outline-none" />
+        </div>
+        <div id="reg-error" class="hidden text-red-400 bg-red-950/60 border border-red-800 p-2 rounded-lg"></div>
+        <div class="flex gap-2 pt-2">
+          <button type="submit" class="flex-1 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 font-bold text-sm transition">Registrarme</button>
+          <button type="button" onclick="cerrarModalRegistro()" class="px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 font-bold text-sm">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= APLICACIÓN PRINCIPAL ================= -->
+  <div id="app-view" class="hidden flex-1 flex flex-col">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-30 bg-zinc-950/90 backdrop-blur border-b border-zinc-800 px-6 py-3.5">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center font-black text-white">AS</div>
+          <div>
+            <h2 class="font-extrabold text-base leading-tight">AutoSmart <span class="text-red-500">Digital</span></h2>
+            <p id="cloud-badge" class="text-[11px] text-emerald-400 font-medium">Conectando Cloud...</p>
+          </div>
+        </div>
+
+        <nav class="flex flex-wrap gap-2 text-xs font-semibold">
+          <button onclick="switchTab('dashboard')" id="btn-tab-dashboard" class="tab-btn active px-3.5 py-2 rounded-xl border border-zinc-800 transition">Dashboard ML</button>
+          <button onclick="switchTab('predictor')" id="btn-tab-predictor" class="tab-btn px-3.5 py-2 rounded-xl border border-zinc-800 transition">Predictor AI</button>
+          <button onclick="switchTab('ordenes')" id="btn-tab-ordenes" class="tab-btn px-3.5 py-2 rounded-xl border border-zinc-800 transition">Órdenes & Live Tracker</button>
+          <button onclick="switchTab('blockchain')" id="btn-tab-blockchain" class="tab-btn px-3.5 py-2 rounded-xl border border-zinc-800 transition">Blockchain</button>
+          <button onclick="switchTab('seguridad')" id="btn-tab-seguridad" class="tab-btn px-3.5 py-2 rounded-xl border border-zinc-800 transition">Ciberseguridad</button>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="text-right">
+            <p id="nav-user-name" class="text-xs font-bold text-white">—</p>
+            <span id="nav-user-role" class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">—</span>
+          </div>
+          <button onclick="logout()" class="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold">Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl w-full mx-auto p-6 flex-1 space-y-6">
+
+      <!-- ============== TAB 1: DASHBOARD ML ============== -->
+      <section id="tab-dashboard" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-zinc-400">Exactitud Modelo 1 (Necesidad)</p>
+            <p id="kpi-acc1" class="text-3xl font-black text-white mt-1">--%</p>
+            <p class="text-xs text-emerald-400 mt-1">Random Forest Binario (OE7)</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-zinc-400">Área Bajo la Curva (ROC-AUC)</p>
+            <p id="kpi-auc" class="text-3xl font-black text-red-400 mt-1">--</p>
+            <p class="text-xs text-zinc-400 mt-1">Capacidad de discriminación</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-zinc-400">Exactitud Modelo 2 (Servicio)</p>
+            <p id="kpi-acc2" class="text-3xl font-black text-blue-400 mt-1">--%</p>
+            <p class="text-xs text-zinc-400 mt-1">5 categorías de servicio (OE8)</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-zinc-400">Dataset Entrenado</p>
+            <p id="kpi-rows" class="text-3xl font-black text-amber-400 mt-1">--</p>
+            <p class="text-xs text-zinc-400 mt-1">Partición 70% Train / 30% Test</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="glass-card rounded-2xl p-5">
+            <h3 class="font-bold text-sm mb-3 text-zinc-200">Importancia de Variables (Patrones de Fallas)</h3>
+            <canvas id="chart-importance" height="220"></canvas>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <h3 class="font-bold text-sm mb-3 text-zinc-200">Curva ROC — Modelo 1 (Necesidad de Mantenimiento)</h3>
+            <canvas id="chart-roc" height="220"></canvas>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="glass-card rounded-2xl p-5">
+            <h3 class="font-bold text-sm mb-3 text-zinc-200">Matriz de Confusión — Modelo 1 (300 vehículos de prueba)</h3>
+            <div id="cm1-container" class="overflow-x-auto"></div>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <h3 class="font-bold text-sm mb-3 text-zinc-200">Matriz de Confusión — Modelo 2 (151 vehículos de prueba)</h3>
+            <div id="cm2-container" class="overflow-x-auto"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== TAB 2: PREDICTOR INTERACTIVO + BLOCKCHAIN ============== -->
+      <section id="tab-predictor" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-5 glass-card rounded-2xl p-6">
+          <h3 class="text-lg font-extrabold mb-1">Predictor AutoSmart <span class="text-red-500">AI</span></h3>
+          <p class="text-xs text-zinc-400 mb-5">Cada diagnóstico se guarda en Supabase y se sella criptográficamente en la Blockchain.</p>
+
+          <form id="predict-form" class="space-y-3 text-xs">
+            <div>
+              <label class="text-zinc-400 block mb-1">Placa del Vehículo</label>
+              <input id="p-placa" type="text" required value="F4T-902" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700 uppercase font-bold" />
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div><label class="text-zinc-400">Kilometraje total</label><input id="p-km" type="number" min="0" required value="95000" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Antigüedad (años)</label><input id="p-ant" type="number" min="0" required value="7" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Km último servicio</label><input id="p-km-ult" type="number" min="0" required value="12000" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Meses último servicio</label><input id="p-mes-ult" type="number" min="0" required value="10" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Fallas previas totales</label><input id="p-fallas" type="number" min="0" required value="3" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Uso diario (km)</label><input id="p-uso" type="number" step="0.1" min="0" required value="40" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Fallas Motor</label><input id="p-motor" type="number" min="0" required value="0" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+              <div><label class="text-zinc-400">Fallas Frenos</label><input id="p-frenos" type="number" min="0" required value="2" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" /></div>
+            </div>
+            <div>
+              <label class="text-zinc-400">Fallas Eléctricas</label>
+              <input id="p-elec" type="number" min="0" required value="0" class="w-full mt-1 px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" />
+            </div>
+            <div class="flex gap-2 pt-2">
+              <button type="submit" class="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-500 font-bold text-sm transition">Analizar y Sellar en Blockchain</button>
+            </div>
+            <div id="predict-error" class="hidden text-red-400 bg-red-950/60 border border-red-800 p-2 rounded-lg"></div>
+          </form>
+        </div>
+
+        <div class="lg:col-span-7 glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-extrabold mb-4">Resultado del Diagnóstico Predictivo</h3>
+            <div id="predict-empty" class="text-center py-16 text-zinc-500 text-sm">
+              Completa los datos del vehículo y presiona <strong>Analizar</strong> para ejecutar los Modelos 1 y 2 en cascada.
+            </div>
+            <div id="predict-result" class="hidden space-y-5">
+              <div id="res-banner" class="p-4 rounded-xl border"></div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                  <p class="text-xs text-zinc-400">Probabilidad SÍ Necesita</p>
+                  <p id="res-prob-si" class="text-2xl font-black text-red-400 mt-1">—</p>
+                </div>
+                <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                  <p class="text-xs text-zinc-400">Servicio Estimado (Modelo 2)</p>
+                  <p id="res-servicio" class="text-xl font-black text-white mt-1">—</p>
+                </div>
+              </div>
+              <div>
+                <p class="text-xs text-zinc-400 mb-2 font-semibold">Distribución de Probabilidades por Servicio</p>
+                <canvas id="chart-pred" height="140"></canvas>
+              </div>
+              <div class="bg-emerald-950/30 border border-emerald-700/40 rounded-xl p-3 text-xs">
+                <p class="text-emerald-400 font-bold">Bloque Blockchain Minado y Guardado en Supabase</p>
+                <p id="res-hash" class="hash-mono text-[11px] text-zinc-300 break-all mt-1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== TAB 3: ÓRDENES & LIVE TRACKER (QR) ============== -->
+      <section id="tab-ordenes" class="hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div id="orden-form-card" class="lg:col-span-4 glass-card rounded-2xl p-5">
+            <h3 class="font-bold text-base mb-1">Registrar Ingreso de Vehículo</h3>
+            <p class="text-xs text-zinc-400 mb-4">Roles autorizados: Admin y Recepción.</p>
+            <form id="orden-form" class="space-y-3 text-xs">
+              <input id="o-placa" required placeholder="Placa (Ej: B5K-412)" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700 uppercase" />
+              <input id="o-cliente" required placeholder="Nombre completo del cliente" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" />
+              <input id="o-tel" required placeholder="Teléfono (Ej: 998877665)" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" />
+              <input id="o-modelo" required placeholder="Marca / Modelo (Ej: Hyundai Accent 2021)" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" />
+              <input id="o-km" type="number" min="0" required placeholder="Kilometraje actual" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700" />
+              <textarea id="o-diag" rows="2" placeholder="Motivo de ingreso" class="w-full px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-700"></textarea>
+              <button type="submit" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-500 font-bold text-sm transition">Crear Orden + Generar QR</button>
+              <div id="orden-error" class="hidden text-red-400 bg-red-950/60 border border-red-800 p-2 rounded-lg"></div>
+            </form>
+          </div>
+
+          <div id="ordenes-list-card" class="lg:col-span-8 glass-card rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-base">Órdenes Activas en la Nube</h3>
+              <button onclick="loadOrdenes()" class="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold">Actualizar</button>
+            </div>
+            <div id="ordenes-list" class="space-y-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== TAB 4: BLOCKCHAIN ============== -->
+      <section id="tab-blockchain" class="hidden space-y-5">
+        <div class="glass-card rounded-2xl p-5 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-extrabold">Cadena de Bloques Inmutable <span class="text-red-500">(SHA-256 + PoW)</span></h3>
+            <p class="text-xs text-zinc-400 mt-0.5">Evita la adulteración del historial de kilometraje y reparaciones del taller.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <button onclick="verificarYReparar()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold transition">Verificar Integridad</button>
+            <button onclick="simularAtaque()" class="px-4 py-2 rounded-xl bg-amber-600/90 hover:bg-amber-500 font-bold transition">Simular Adulteración (Admin)</button>
+            <button onclick="restaurarCadena()" class="px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 font-bold transition">Restaurar Cadena</button>
+          </div>
+        </div>
+
+        <div id="bc-status-banner" class="p-4 rounded-xl border text-sm font-semibold"></div>
+        <div id="bc-chain" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </section>
+
+      <!-- ============== TAB 5: CIBERSEGURIDAD Y AUDITORÍA ============== -->
+      <section id="tab-seguridad" class="hidden space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-red-400 font-bold uppercase">Autenticación</p>
+            <h4 class="font-bold text-white mt-1">Hashing bcrypt + JWT</h4>
+            <p class="text-xs text-zinc-400 mt-1">Ninguna contraseña se almacena en texto plano. Sesiones firmadas con HS256 y expiración de 8 horas.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-blue-400 font-bold uppercase">Control de Acceso</p>
+            <h4 class="font-bold text-white mt-1">RBAC + Supabase RLS</h4>
+            <p class="text-xs text-zinc-400 mt-1">Permisos estrictos en API y Row Level Security activado en todas las tablas de PostgreSQL.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-emerald-400 font-bold uppercase">Privacidad (Ley N.° 29733)</p>
+            <h4 class="font-bold text-white mt-1">Enmascaramiento PII</h4>
+            <p class="text-xs text-zinc-400 mt-1">El Live Tracker público oculta nombre completo y teléfono real del cliente mediante ofuscación.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-base">Registros de Auditoría en Tiempo Real (Solo Admin)</h3>
+            <button onclick="loadAuditoria()" class="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold">Refrescar Logs</button>
+          </div>
+          <div id="audit-container" class="overflow-x-auto text-xs"></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- MODAL QR LIVE TRACKER -->
+  <div id="qr-modal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+    <div class="glass-card max-w-sm w-full rounded-2xl p-6 text-center">
+      <h3 class="font-extrabold text-lg">Live Tracker QR</h3>
+      <p id="qr-title" class="text-xs text-zinc-400 mb-4"></p>
+      <div id="qr-code-box" class="bg-white p-4 rounded-xl inline-block mx-auto mb-4"></div>
+      <div class="flex gap-2">
+        <button id="qr-open-btn" class="flex-1 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-xs font-bold">Abrir Vista Cliente</button>
+        <button onclick="document.getElementById('qr-modal').classList.add('hidden')" class="px-4 py-2 rounded-xl bg-zinc-800 text-xs font-bold">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const API_URL = "";
+  let token = localStorage.getItem("autosmart_token") || null;
+  let currentUser = JSON.parse(localStorage.getItem("autosmart_user") || "null");
+  let chartImp = null, chartRoc = null, chartPred = null;
+  let cadenaEsValida = true;
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("tracker")) {
+    abrirTrackerPublico(params.get("tracker"));
+  } else if (token && currentUser) {
+    initApp();
+  }
+
+  function fillLogin(email, pass) {
+    document.getElementById("login-email").value = email;
+    document.getElementById("login-password").value = pass;
+  }
+
+  function abrirModalRegistro() {
+    document.getElementById("reg-error").classList.add("hidden");
+    document.getElementById("register-form").reset();
+    document.getElementById("register-modal").classList.remove("hidden");
+  }
+
+  function cerrarModalRegistro() {
+    document.getElementById("register-modal").classList.add("hidden");
+  }
+
+  document.getElementById("register-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const errEl = document.getElementById("reg-error");
+    errEl.classList.add("hidden");
+    const nombre = document.getElementById("reg-nombre").value.trim();
+    const email = document.getElementById("reg-email").value.trim();
+    const password = document.getElementById("reg-pass").value;
+
+    try {
+      const res = await fetch(`${API_URL}/api/auth/register-cliente`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || "Error al registrar cliente");
+      cerrarModalRegistro();
+      fillLogin(email, password);
+      alert(data.mensaje || "Cuenta de cliente creada. Ya puedes iniciar sesión.");
+    } catch (err) {
+      errEl.textContent = err.message;
+      errEl.classList.remove("hidden");
+    }
+  });
+
+  document.getElementById("login-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const errEl = document.getElementById("login-error");
+    errEl.classList.add("hidden");
+    try {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: document.getElementById("login-email").value,
+          password: document.getElementById("login-password").value,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || "Error de autenticación");
+      token = data.access_token;
+      currentUser = data.user;
+      localStorage.setItem("autosmart_token", token);
+      localStorage.setItem("autosmart_user", JSON.stringify(currentUser));
+      initApp();
+    } catch (err) {
+      errEl.textContent = err.message;
+      errEl.classList.remove("hidden");
+    }
+  });
+
+  function logout() {
+    localStorage.removeItem("autosmart_token");
+    localStorage.removeItem("autosmart_user");
+    location.reload();
+  }
+
+  async function apiFetch(endpoint, options = {}) {
+    const res = await fetch(`${API_URL}${endpoint}`, {
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+        ...(options.headers || {}),
+      },
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || "Error en solicitud");
+    return data;
+  }
+
+  async function initApp() {
+    document.getElementById("login-view").classList.add("hidden");
+    document.getElementById("public-tracker-view").classList.add("hidden");
+    document.getElementById("app-view").classList.remove("hidden");
+    document.getElementById("nav-user-name").textContent = currentUser.nombre;
+    document.getElementById("nav-user-role").textContent = currentUser.rol;
+
+    const status = await fetch(`${API_URL}/api/status`).then(r => r.json());
+    const badge = document.getElementById("cloud-badge");
+    badge.textContent = status.cloud_provider;
+    badge.className = status.cloud_connected
+      ? "text-[11px] text-emerald-400 font-semibold"
+      : "text-[11px] text-amber-400 font-semibold";
+
+    // Control visual por rol: Cliente solo ve Predictor AI y Órdenes/Live Tracker
+    const esCliente = currentUser.rol === "cliente";
+    document.getElementById("btn-tab-dashboard").classList.toggle("hidden", esCliente);
+    document.getElementById("btn-tab-blockchain").classList.toggle("hidden", esCliente);
+    document.getElementById("btn-tab-seguridad").classList.toggle("hidden", esCliente);
+
+    // En la pestaña Órdenes, ocultar formulario de registro para clientes
+    const formCard = document.getElementById("orden-form-card");
+    const listCard = document.getElementById("ordenes-list-card");
+    formCard.classList.toggle("hidden", esCliente);
+    listCard.className = esCliente
+      ? "lg:col-span-12 glass-card rounded-2xl p-5"
+      : "lg:col-span-8 glass-card rounded-2xl p-5";
+
+    if (esCliente) {
+      switchTab("predictor");
+      return;
+    }
+
+    await loadDashboard();
+  }
+
+  function switchTab(tab) {
+    ["dashboard", "predictor", "ordenes", "blockchain", "seguridad"].forEach(t => {
+      document.getElementById(`tab-${t}`).classList.add("hidden");
+      document.getElementById(`btn-tab-${t}`).classList.remove("active");
+    });
+    document.getElementById(`tab-${tab}`).classList.remove("hidden");
+    document.getElementById(`btn-tab-${tab}`).classList.add("active");
+    if (tab === "ordenes") loadOrdenes();
+    if (tab === "blockchain") loadBlockchain();
+    if (tab === "seguridad") loadAuditoria();
+  }
+
+  // ================= DASHBOARD ML =================
+  async function loadDashboard() {
+    const m = await apiFetch("/api/ml/metrics");
+    document.getElementById("kpi-acc1").textContent = `${m.modelo_1.accuracy}%`;
+    document.getElementById("kpi-auc").textContent = m.modelo_1.roc_auc.toFixed(2);
+    document.getElementById("kpi-acc2").textContent = `${m.modelo_2.accuracy}%`;
+    document.getElementById("kpi-rows").textContent = m.total_registros.toLocaleString();
+
+    if (chartImp) chartImp.destroy();
+    chartImp = new Chart(document.getElementById("chart-importance"), {
+      type: "bar",
+      data: {
+        labels: m.modelo_1.importancia_variables.map(v => v.variable),
+        datasets: [{
+          label: "Importancia",
+          data: m.modelo_1.importancia_variables.map(v => (v.importancia * 100).toFixed(1)),
+          backgroundColor: "#ef4444",
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: "y",
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#a1a1aa", callback: v => v + "%" }, grid: { color: "#27272a" } },
+          y: { ticks: { color: "#e4e4e7", font: { size: 11 } }, grid: { display: false } }
+        }
+      }
+    });
+
+    if (chartRoc) chartRoc.destroy();
+    chartRoc = new Chart(document.getElementById("chart-roc"), {
+      type: "scatter",
+      data: {
+        datasets: [
+          {
+            label: `Random Forest (AUC = ${m.modelo_1.roc_auc.toFixed(2)})`,
+            data: m.modelo_1.roc_curve,
+            showLine: true,
+            borderColor: "#3b82f6",
+            backgroundColor: "rgba(59,130,246,0.15)",
+            fill: true,
+            pointRadius: 2
+          },
+          {
+            label: "Azar (0.50)",
+            data: [{ x: 0, y: 0 }, { x: 1, y: 1 }],
+            showLine: true,
+            borderColor: "#52525b",
+            borderDash: [5, 5],
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        scales: {
+          x: { min: 0, max: 1, title: { display: true, text: "Tasa Falsos Positivos", color: "#a1a1aa" }, ticks: { color: "#a1a1aa" }, grid: { color: "#27272a" } },
+          y: { min: 0, max: 1, title: { display: true, text: "Tasa Verdaderos Positivos", color: "#a1a1aa" }, ticks: { color: "#a1a1aa" }, grid: { color: "#27272a" } }
+        },
+        plugins: { legend: { labels: { color: "#e4e4e7" } } }
+      }
+    });
+
+    const cm1 = m.modelo_1.matriz_confusion;
+    document.getElementById("cm1-container").innerHTML = `
+      <table class="w-full text-center text-xs border-collapse">
+        <thead><tr class="text-zinc-400"><th class="p-2">Real \\ Predicho</th><th class="p-2">No necesita</th><th class="p-2">Necesita</th></tr></thead>
+        <tbody>
+          <tr><td class="p-2 font-bold text-zinc-300">No necesita</td><td class="p-4 rounded bg-blue-600/40 font-black text-lg">${cm1[0][0]}</td><td class="p-4 bg-zinc-800/70">${cm1[0][1]}</td></tr>
+          <tr><td class="p-2 font-bold text-zinc-300">Necesita</td><td class="p-4 bg-zinc-800/70">${cm1[1][0]}</td><td class="p-4 rounded bg-blue-600/40 font-black text-lg">${cm1[1][1]}</td></tr>
+        </tbody>
+      </table>`;
+
+    const cm2 = m.modelo_2.matriz_confusion;
+    const cls = m.modelo_2.clases;
+    let html2 = `<table class="w-full text-center text-[11px] border-collapse"><thead><tr class="text-zinc-400"><th class="p-1.5 text-left">Real \\ Pred.</th>${cls.map(c => `<th class="p-1.5">${c.split('/')[0]}</th>`).join("")}</tr></thead><tbody>`;
+    cm2.forEach((row, i) => {
+      html2 += `<tr class="border-t border-zinc-800"><td class="p-1.5 text-left font-bold text-zinc-300">${cls[i]}</td>`;
+      row.forEach((val, j) => {
+        const bg = i === j ? "bg-emerald-600/40 font-black text-white" : (val > 0 ? "bg-zinc-800/60 text-zinc-300" : "text-zinc-600");
+        html2 += `<td class="p-2 ${bg}">${val}</td>`;
+      });
+      html2 += `</tr>`;
+    });
+    html2 += `</tbody></table>`;
+    document.getElementById("cm2-container").innerHTML = html2;
+  }
+
+  // ================= PREDICTOR ML + BLOCKCHAIN =================
+  document.getElementById("predict-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const errEl = document.getElementById("predict-error");
+    errEl.classList.add("hidden");
+    try {
+      const payload = {
+        placa: document.getElementById("p-placa").value,
+        Kilometraje: +document.getElementById("p-km").value,
+        Antiguedad: +document.getElementById("p-ant").value,
+        KmDesdeUltimoServicio: +document.getElementById("p-km-ult").value,
+        MesesDesdeUltimoServicio: +document.getElementById("p-mes-ult").value,
+        FallasPrevias: +document.getElementById("p-fallas").value,
+        FallasMotor: +document.getElementById("p-motor").value,
+        FallasFrenos: +document.getElementById("p-frenos").value,
+        FallasElectricas: +document.getElementById("p-elec").value,
+        UsoPromedioDiario: +document.getElementById("p-uso").value,
+      };
+      const data = await apiFetch("/api/ml/predict", { method: "POST", body: JSON.stringify(payload) });
+      const p = data.prediccion;
+      document.getElementById("predict-empty").classList.add("hidden");
+      document.getElementById("predict-result").classList.remove("hidden");
+
+      const banner = document.getElementById("res-banner");
+      if (p.necesita_mantenimiento) {
+        banner.className = "p-4 rounded-xl border bg-red-950/60 border-red-600 text-red-200 font-bold";
+        banner.textContent = "ALERTA PREVENTIVA: EL VEHÍCULO REQUIERE MANTENIMIENTO PRÓXIMO";
+      } else {
+        banner.className = "p-4 rounded-xl border bg-emerald-950/60 border-emerald-600 text-emerald-200 font-bold";
+        banner.textContent = "ÓPTIMO: EL VEHÍCULO NO REQUIERE MANTENIMIENTO INMEDIATO";
+      }
+
+      document.getElementById("res-prob-si").textContent = `${p.probabilidad_si}%`;
+      document.getElementById("res-servicio").textContent = p.servicio_estimado;
+      document.getElementById("res-hash").textContent = `Bloque #${data.bloque.index_bloque} | Nonce: ${data.bloque.nonce} | SHA-256: ${data.bloque.hash_actual}`;
+
+      if (chartPred) chartPred.destroy();
+      const labels = p.probabilidades_servicio.length ? p.probabilidades_servicio.map(x => x.servicio) : ["Sin mantenimiento"];
+      const values = p.probabilidades_servicio.length ? p.probabilidades_servicio.map(x => x.probabilidad) : [p.probabilidad_no];
+      chartPred = new Chart(document.getElementById("chart-pred"), {
+        type: "bar",
+        data: { labels, datasets: [{ data: values, backgroundColor: p.necesita_mantenimiento ? "#ef4444" : "#10b981", borderRadius: 6 }] },
+        options: {
+          indexAxis: "y",
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { min: 0, max: 100, ticks: { color: "#a1a1aa", callback: v => v + "%" }, grid: { color: "#27272a" } },
+            y: { ticks: { color: "#e4e4e7" }, grid: { display: false } }
+          }
+        }
+      });
+    } catch (err) {
+      errEl.textContent = err.message;
+      errEl.classList.remove("hidden");
+    }
+  });
+
+  // ================= ÓRDENES & LIVE TRACKER =================
+  document.getElementById("orden-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const errEl = document.getElementById("orden-error");
+    errEl.classList.add("hidden");
+    try {
+      await apiFetch("/api/ordenes", {
+        method: "POST",
+        body: JSON.stringify({
+          placa: document.getElementById("o-placa").value,
+          cliente_nombre: document.getElementById("o-cliente").value,
+          cliente_telefono: document.getElementById("o-tel").value,
+          vehiculo_modelo: document.getElementById("o-modelo").value,
+          kilometraje: +document.getElementById("o-km").value,
+          diagnostico: document.getElementById("o-diag").value || "Ingreso registrado",
+        }),
+      });
+      e.target.reset();
+      loadOrdenes();
+    } catch (err) {
+      errEl.textContent = err.message;
+      errEl.classList.remove("hidden");
+    }
+  });
+
+  async function loadOrdenes() {
+    const ordenes = await apiFetch("/api/ordenes");
+    const estados = ["Recepción", "Diagnóstico", "Repuestos", "Reparación", "Listo"];
+    const esCliente = currentUser.rol === "cliente";
+
+    document.getElementById("ordenes-list").innerHTML = ordenes.map(o => `
+      <div class="bg-zinc-900/90 border border-zinc-800 rounded-xl p-4 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-red-400 text-sm">${o.codigo}</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800 text-xs font-bold">${o.placa}</span>
+            <span class="text-xs text-zinc-400">${o.vehiculo_modelo} (${o.kilometraje.toLocaleString()} km)</span>
+          </div>
+          <p class="text-xs text-zinc-300 mt-1">Cliente: <strong>${o.cliente_nombre}</strong> | ${o.diagnostico}</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          ${esCliente
+            ? `<span class="px-3 py-1.5 rounded-lg bg-zinc-800 text-zinc-200 font-bold">Estado: ${o.estado}</span>`
+            : `<select onchange="cambiarEstado('${o.codigo}', this.value)" class="bg-zinc-950 border border-zinc-700 rounded-lg px-2.5 py-1.5 font-semibold">
+                ${estados.map(es => `<option value="${es}" ${es === o.estado ? "selected" : ""}>${es}</option>`).join("")}
+               </select>`
+          }
+          <button onclick="mostrarQR('${o.codigo}','${o.placa}')" class="px-3 py-1.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 font-bold hover:bg-emerald-600/30">QR Tracker</button>
+          ${esCliente ? "" : `<button onclick="eliminarOrden('${o.codigo}')" class="px-2.5 py-1.5 rounded-lg bg-red-950/60 border border-red-800/60 text-red-300 hover:bg-red-900">X</button>`}
+        </div>
+      </div>`).join("");
+  }
+
+  async function cambiarEstado(codigo, estado) {
+    try {
+      await apiFetch(`/api/ordenes/${codigo}/estado`, { method: "PATCH", body: JSON.stringify({ estado }) });
+      loadOrdenes();
+    } catch (err) { alert(err.message); loadOrdenes(); }
+  }
+
+  async function eliminarOrden(codigo) {
+    if (!confirm(`¿Eliminar orden ${codigo}?`)) return;
+    try {
+      await apiFetch(`/api/ordenes/${codigo}`, { method: "DELETE" });
+      loadOrdenes();
+    } catch (err) { alert(err.message); }
+  }
+
+  function mostrarQR(codigo, placa) {
+    const url = `${window.location.origin}/?tracker=${codigo}`;
+    document.getElementById("qr-title").textContent = `${codigo} — Placa ${placa}`;
+    const box = document.getElementById("qr-code-box");
+    box.innerHTML = "";
+    new QRCode(box, { text: url, width: 180, height: 180 });
+    document.getElementById("qr-open-btn").onclick = () => {
+      document.getElementById("qr-modal").classList.add("hidden");
+      abrirTrackerPublico(codigo);
+    };
+    document.getElementById("qr-modal").classList.remove("hidden");
+  }
+
+  async function abrirTrackerPublico(codigo) {
+    try {
+      const data = await fetch(`${API_URL}/api/tracker/${codigo}`).then(async r => {
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.detail);
+        return j;
+      });
+      document.getElementById("login-view").classList.add("hidden");
+      document.getElementById("app-view").classList.add("hidden");
+      document.getElementById("public-tracker-view").classList.remove("hidden");
+      document.getElementById("pt-codigo").textContent = data.codigo;
+      document.getElementById("pt-vehiculo").textContent = `${data.vehiculo_modelo} (${data.placa})`;
+      document.getElementById("pt-cliente").textContent = `${data.cliente_enmascarado} | ${data.telefono_enmascarado}`;
+      document.getElementById("pt-diagnostico").textContent = data.diagnostico;
+
+      const pasos = ["Recepción", "Diagnóstico", "Repuestos", "Reparación", "Listo"];
+      const idx = pasos.indexOf(data.estado);
+      document.getElementById("pt-steps").innerHTML = pasos.map((p, i) => `
+        <div class="p-2 rounded-lg border ${i <= idx ? "bg-red-600/30 border-red-500 text-white font-bold" : "bg-zinc-900 border-zinc-800 text-zinc-500"}">
+          ${i + 1}. ${p}
+        </div>`).join("");
+    } catch (err) { alert(err.message); }
+  }
+
+  function cerrarTrackerPublico() {
+    window.history.replaceState({}, "", "/");
+    if (token && currentUser) initApp();
+    else {
+      document.getElementById("public-tracker-view").classList.add("hidden");
+      document.getElementById("login-view").classList.remove("hidden");
+    }
+  }
+
+  // ================= BLOCKCHAIN =================
+  async function loadBlockchain() {
+    const data = await apiFetch("/api/blockchain");
+    const v = data.verificacion;
+    cadenaEsValida = v.valida;
+
+    const banner = document.getElementById("bc-status-banner");
+    const corruptos = new Set(v.errores.map(e => e.index_bloque));
+
+    if (v.valida) {
+      banner.className = "p-4 rounded-xl border bg-emerald-950/50 border-emerald-600 text-emerald-300 text-sm font-bold";
+      banner.textContent = `CADENA ÍNTEGRA VERIFICADA — ${v.total_bloques} bloques válidos enlazados con SHA-256 (0 alteraciones).`;
+    } else {
+      banner.className = "p-4 rounded-xl border bg-red-950/70 border-red-500 text-red-200 text-sm font-bold";
+      banner.textContent = `ALERTA CRÍTICA DE SEGURIDAD: Se detectaron ${v.errores.length} inconsistencia(s) en la cadena (Bloques comprometidos: #${[...corruptos].join(", #")}).`;
+    }
+
+    document.getElementById("bc-chain").innerHTML = data.bloques.map(b => {
+      const bad = corruptos.has(b.index_bloque);
+      return `
+        <div class="glass-card rounded-2xl p-4 border ${bad ? "border-red-500 bg-red-950/40" : "border-zinc-800"}">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-black text-sm ${bad ? "text-red-400" : "text-emerald-400"}">Bloque #${b.index_bloque}</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-zinc-800 font-bold">${b.evento}</span>
+          </div>
+          <p class="text-xs font-bold text-white mb-1">Placa: ${b.placa}</p>
+          <pre class="text-[10px] bg-zinc-950 p-2 rounded-lg text-zinc-300 overflow-x-auto mb-2">${b.datos_json}</pre>
+          <p class="hash-mono text-[10px] text-zinc-400 truncate">Prev: ${b.previous_hash}</p>
+          <p class="hash-mono text-[10px] ${bad ? "text-red-400" : "text-emerald-400"} truncate">Hash: ${b.hash_actual}</p>
+          <p class="text-[10px] text-zinc-500 mt-1">Nonce PoW: ${b.nonce} | ${b.timestamp.slice(0, 19)}</p>
+        </div>`;
+    }).join("");
+  }
+
+  async function verificarYReparar() {
+    if (!cadenaEsValida) {
+      try {
+        await apiFetch("/api/blockchain/restore", { method: "POST" });
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+    await loadBlockchain();
+  }
+
+  async function simularAtaque() {
+    try {
+      await apiFetch("/api/blockchain/tamper/1", { method: "POST" });
+      loadBlockchain();
+    } catch (err) { alert(err.message); }
+  }
+
+  async function restaurarCadena() {
+    try {
+      await apiFetch("/api/blockchain/restore", { method: "POST" });
+      loadBlockchain();
+    } catch (err) { alert(err.message); }
+  }
+
+  // ================= AUDITORÍA =================
+  async function loadAuditoria() {
+    const container = document.getElementById("audit-container");
+    try {
+      const logs = await apiFetch("/api/auditoria");
+      container.innerHTML = `
+        <table class="w-full text-left border-collapse">
+          <thead><tr class="border-b border-zinc-800 text-zinc-400"><th class="p-2">Fecha</th><th class="p-2">Usuario</th><th class="p-2">Rol</th><th class="p-2">Acción</th><th class="p-2">Detalle</th></tr></thead>
+          <tbody>
+            ${logs.map(l => `
+              <tr class="border-b border-zinc-900 hover:bg-zinc-900/60">
+                <td class="p-2 text-zinc-500">${(l.creado_en || "").slice(0, 19).replace("T", " ")}</td>
+                <td class="p-2 font-semibold text-white">${l.usuario_email}</td>
+                <td class="p-2"><span class="px-2 py-0.5 rounded bg-zinc-800 uppercase text-[10px]">${l.rol}</span></td>
+                <td class="p-2 font-bold ${l.accion.includes('FALLIDO') || l.accion.includes('ATAQUE') ? 'text-red-400' : 'text-emerald-400'}">${l.accion}</td>
+                <td class="p-2 text-zinc-300">${l.detalle}</td>
+              </tr>`).join("")}
+          </tbody>
+        </table>`;
+    } catch (err) {
+      container.innerHTML = `<div class="p-4 rounded-xl bg-red-950/40 border border-red-800 text-red-300 font-semibold">${err.message}</div>`;
+    }
+  }
+</script>
+</body>
+</html>

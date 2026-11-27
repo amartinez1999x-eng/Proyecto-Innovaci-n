@@ -1,0 +1,1001 @@
+﻿Kilometraje,Antiguedad,KmDesdeUltimoServicio,MesesDesdeUltimoServicio,FallasPrevias,FallasMotor,FallasFrenos,FallasElectricas,UsoPromedioDiario,NecesitaMantenimiento,TipoServicio
+70803,7,6491,9,1,0,1,0,24.3,0,Sin mantenimiento
+135849,9,26870,21,2,0,1,1,48.2,1,Cambio de aceite
+50149,6,27713,18,2,1,0,1,45.5,1,Cambio de aceite
+51489,6,17789,15,3,0,2,1,35.3,1,Frenos
+91934,10,595,1,4,1,1,2,22.7,0,Sin mantenimiento
+65014,6,16162,14,3,0,2,0,37.6,1,Frenos
+58922,8,11127,14,1,0,0,0,33.7,0,Sin mantenimiento
+31117,7,4027,8,1,1,0,0,16.8,0,Sin mantenimiento
+42717,10,5878,18,4,2,0,0,15.6,1,Revision general
+78740,5,30013,23,1,0,1,0,47.8,1,Cambio de aceite
+30064,12,1335,7,1,0,0,1,8.4,0,Sin mantenimiento
+40745,4,11098,8,0,0,0,0,39.2,0,Sin mantenimiento
+71090,8,5921,8,4,2,1,1,26.9,1,Revision general
+136730,7,35000,21,2,0,1,0,71.9,1,Cambio de aceite
+35717,4,1387,2,2,0,1,1,26.7,0,Sin mantenimiento
+105495,9,27332,22,2,1,1,0,50.3,1,Cambio de aceite
+52150,5,12377,19,4,1,2,1,28.1,1,Frenos
+38877,3,16058,12,0,0,0,0,37.3,0,Sin mantenimiento
+154055,9,26683,15,3,1,0,1,52.5,1,Cambio de aceite
+36285,2,13074,22,1,0,0,0,27.1,1,Cambio de aceite
+55575,3,35000,19,2,1,0,1,60.5,1,Cambio de aceite
+28834,6,3835,7,0,0,0,0,20.3,0,Sin mantenimiento
+119225,10,1628,2,4,1,1,0,41.2,1,Suspension
+193102,9,26985,16,5,1,1,3,58.1,1,Bateria/Sistema electrico
+101773,7,4396,4,1,0,0,1,50.3,0,Sin mantenimiento
+28153,1,7013,3,1,1,0,0,100.4,0,Sin mantenimiento
+18443,4,17679,24,0,0,0,0,23,1,Cambio de aceite
+22558,5,4746,12,1,0,0,1,16.4,0,Sin mantenimiento
+19930,3,11523,16,2,1,1,0,20.3,0,Sin mantenimiento
+19598,1,9461,6,1,0,1,0,50.3,0,Sin mantenimiento
+88090,6,4761,3,1,0,1,0,46,0,Sin mantenimiento
+115930,9,2264,2,3,0,0,2,37,0,Sin mantenimiento
+33195,4,5969,9,3,2,1,0,18.9,0,Sin mantenimiento
+194187,10,1388,1,6,1,2,1,53.4,1,Frenos
+12520,2,5768,11,0,0,0,0,17.8,0,Sin mantenimiento
+53860,3,15246,8,2,2,0,0,66.2,0,Sin mantenimiento
+284568,6,35000,13,2,0,2,0,168.5,1,Frenos
+53250,4,14430,15,1,0,1,0,42.8,0,Sin mantenimiento
+102361,9,11539,8,3,0,2,0,48.2,0,Sin mantenimiento
+66341,8,9712,11,1,1,0,0,26.7,0,Sin mantenimiento
+23288,4,677,2,2,0,1,1,12.9,0,Sin mantenimiento
+21456,2,7058,8,1,0,1,0,25.1,0,Sin mantenimiento
+24746,4,12072,24,2,1,1,0,19.2,1,Cambio de aceite
+51377,8,8573,24,2,0,1,1,15.8,1,Bateria/Sistema electrico
+253158,9,32506,12,3,1,0,1,90.3,1,Cambio de aceite
+68716,4,25320,23,2,0,2,0,40.7,1,Cambio de aceite
+13309,1,11086,13,2,0,1,1,43.1,0,Sin mantenimiento
+22084,2,2452,4,0,0,0,0,29.5,0,Sin mantenimiento
+71386,7,15382,21,1,0,0,0,31.8,1,Cambio de aceite
+70546,4,19840,10,2,1,0,1,59.5,0,Sin mantenimiento
+47128,4,18338,15,0,0,0,0,34.4,0,Sin mantenimiento
+61418,3,21986,16,0,0,0,0,46.9,1,Cambio de aceite
+11678,3,5380,8,1,1,0,0,31.4,1,Revision general
+100562,10,15198,18,4,2,2,0,29,1,Revision general
+42235,8,7325,13,2,0,0,1,16.1,0,Sin mantenimiento
+12980,4,3502,9,0,0,0,0,11.8,0,Sin mantenimiento
+74873,6,5999,8,3,0,0,3,30.3,0,Sin mantenimiento
+87152,7,14122,18,1,0,1,0,36.1,1,Cambio de aceite
+59951,15,3697,6,0,0,0,0,17.3,0,Sin mantenimiento
+6233,2,3593,3,1,0,0,0,34.3,0,Sin mantenimiento
+48051,7,16232,22,2,0,2,0,36.1,1,Frenos
+24812,10,2936,8,2,0,2,0,10.7,0,Sin mantenimiento
+103893,14,7194,16,5,2,1,0,21.2,1,Revision general
+46574,3,16267,18,0,0,0,0,43.8,0,Sin mantenimiento
+49122,4,30150,21,1,1,0,0,43.3,1,Cambio de aceite
+55331,9,8656,16,2,0,2,0,18.6,0,Sin mantenimiento
+12112,1,12112,17,1,1,0,0,38.2,0,Sin mantenimiento
+122759,7,35000,21,2,1,1,0,61.4,1,Cambio de aceite
+320000,18,35000,23,7,2,3,2,53.7,1,Frenos
+49689,7,1364,2,1,0,0,0,33.2,0,Sin mantenimiento
+1000,1,1000,18,0,0,0,0,27.1,0,Sin mantenimiento
+23726,3,4135,5,0,0,0,0,24.8,0,Sin mantenimiento
+56636,3,29290,22,0,0,0,0,45.3,1,Cambio de aceite
+173954,11,2899,2,4,1,2,1,39,1,Frenos
+66254,5,9455,6,0,0,0,0,49.5,1,Frenos
+12417,1,4022,5,0,0,0,0,37.6,1,Frenos
+62295,5,19001,15,1,0,1,0,54.9,1,Cambio de aceite
+95436,6,1267,1,2,0,0,0,36.9,0,Sin mantenimiento
+39744,4,2018,1,2,1,1,0,53.9,0,Sin mantenimiento
+70263,3,15624,13,2,0,1,1,56.5,1,Frenos
+110435,18,11498,24,2,0,0,2,22.5,1,Bateria/Sistema electrico
+60137,10,5595,13,3,2,0,1,12.9,0,Sin mantenimiento
+264593,10,18588,11,2,0,2,0,81.8,1,Frenos
+54373,5,13371,16,0,0,0,0,40.3,0,Sin mantenimiento
+16592,3,6775,14,1,0,0,1,13.6,0,Sin mantenimiento
+30782,4,8014,10,1,1,0,0,23.6,0,Sin mantenimiento
+55001,2,28389,15,3,0,1,1,53.5,1,Cambio de aceite
+128836,15,937,1,6,2,2,2,30,1,Revision general
+48368,5,4010,6,2,1,0,1,26.4,0,Sin mantenimiento
+311521,13,35000,17,2,1,0,0,75.6,1,Suspension
+36947,4,4405,9,3,0,0,3,19.7,0,Sin mantenimiento
+53037,8,1104,2,2,1,0,0,22.6,0,Sin mantenimiento
+61167,6,4182,3,0,0,0,0,39.3,0,Sin mantenimiento
+34806,2,28931,21,2,0,2,0,43.4,1,Cambio de aceite
+270613,16,13105,8,4,1,1,1,46,1,Suspension
+88102,4,1289,1,2,1,1,0,57.8,0,Sin mantenimiento
+34613,2,25748,18,3,0,2,0,39,1,Cambio de aceite
+123637,9,18181,13,3,1,2,0,45.8,1,Frenos
+60545,6,10524,11,1,1,0,0,30.3,1,Suspension
+75213,7,28655,22,0,0,0,0,36.2,1,Cambio de aceite
+73259,6,7829,8,5,1,1,2,37.1,0,Sin mantenimiento
+9375,1,9375,14,0,0,0,0,39.4,0,Sin mantenimiento
+33874,3,29895,18,0,0,0,0,53.5,1,Cambio de aceite
+43824,3,23995,15,1,0,1,0,47.5,1,Cambio de aceite
+116112,10,6391,5,2,1,0,1,35.9,1,Bateria/Sistema electrico
+41717,6,12102,17,1,0,0,0,22.4,0,Sin mantenimiento
+99505,8,13547,18,4,1,1,0,36.3,1,Revision general
+51430,4,2357,3,1,0,0,1,34.5,0,Sin mantenimiento
+103157,8,5710,4,4,1,1,1,38.9,0,Sin mantenimiento
+178282,5,35000,17,4,0,3,1,117.8,1,Frenos
+43386,5,2906,3,0,0,0,0,26.2,0,Sin mantenimiento
+67687,6,19584,22,1,0,0,1,44.2,1,Bateria/Sistema electrico
+113922,6,4986,3,5,0,3,1,63,1,Frenos
+227369,18,29409,24,7,4,3,0,36.9,1,Revision general
+92922,3,35000,17,2,1,1,0,126.6,1,Cambio de aceite
+15628,1,6582,11,1,0,0,1,28.4,0,Sin mantenimiento
+77199,7,8922,7,3,0,1,1,41.8,0,Sin mantenimiento
+14815,3,4481,9,1,0,0,0,22.6,0,Sin mantenimiento
+7054,1,7054,18,0,0,0,0,28.8,0,Sin mantenimiento
+43467,2,18160,19,2,0,1,0,40.1,1,Cambio de aceite
+320000,18,6842,6,7,1,2,2,55.7,1,Suspension
+37492,3,12229,14,0,0,0,0,41.7,0,Sin mantenimiento
+35111,1,35000,24,1,1,0,0,70,1,Cambio de aceite
+167602,18,7651,7,6,2,0,4,33.2,1,Bateria/Sistema electrico
+53655,2,17979,17,1,0,0,0,29.2,1,Cambio de aceite
+320000,18,21650,5,8,1,5,2,154.9,1,Frenos
+54436,4,24595,21,1,1,0,0,43.5,1,Cambio de aceite
+113512,16,3057,5,4,1,1,2,23.6,1,Bateria/Sistema electrico
+28719,5,5847,8,0,0,0,0,23.9,0,Sin mantenimiento
+61261,8,6459,12,2,0,0,1,20.8,0,Sin mantenimiento
+100407,5,17364,9,1,1,0,0,58.6,0,Sin mantenimiento
+59822,5,4859,5,5,0,1,3,28.6,0,Sin mantenimiento
+71350,7,21181,16,1,0,0,1,37.5,1,Cambio de aceite
+83479,8,807,1,4,3,1,0,33.8,0,Sin mantenimiento
+87911,6,35000,24,4,2,0,2,52.3,1,Cambio de aceite
+48382,6,1034,2,0,0,0,0,22,0,Sin mantenimiento
+15218,3,3517,9,0,0,0,0,19.4,0,Sin mantenimiento
+49535,5,29362,23,0,0,0,0,39.6,1,Cambio de aceite
+175965,15,5725,4,4,1,2,1,48.7,1,Suspension
+60447,3,2734,2,4,2,2,0,42,0,Sin mantenimiento
+56642,7,8508,18,4,1,0,1,22.4,1,Bateria/Sistema electrico
+134059,12,3802,2,6,0,4,0,50.8,1,Frenos
+53558,8,19128,22,2,0,2,0,23.2,1,Frenos
+69684,10,8054,11,1,0,1,0,26.3,0,Sin mantenimiento
+8892,2,8892,21,0,0,0,0,20.8,0,Sin mantenimiento
+167646,7,10260,6,1,0,1,0,71.6,0,Sin mantenimiento
+59889,4,6501,4,3,0,3,0,49.6,0,Sin mantenimiento
+63721,5,35000,24,1,0,0,0,48.8,1,Cambio de aceite
+303483,14,35000,19,5,1,4,0,69.5,1,Frenos
+189006,5,35000,22,4,0,2,0,164.4,1,Cambio de aceite
+21612,7,3044,8,2,0,1,1,13.7,0,Sin mantenimiento
+9730,1,7989,10,0,0,0,0,23.3,0,Sin mantenimiento
+94436,16,11149,14,2,1,0,1,24.9,1,Bateria/Sistema electrico
+88460,10,5277,11,3,1,2,0,21.9,0,Sin mantenimiento
+40684,5,2503,6,2,0,1,1,19.3,0,Sin mantenimiento
+46089,4,9912,10,3,0,2,0,29.7,0,Sin mantenimiento
+40933,8,8270,15,2,0,1,1,17.9,1,Bateria/Sistema electrico
+164182,12,1214,1,1,0,1,0,42.1,0,Sin mantenimiento
+106192,16,11612,9,1,0,1,0,36,0,Sin mantenimiento
+160678,10,11445,8,3,1,2,0,45.6,1,Frenos
+89275,6,2465,2,3,0,2,1,46.3,0,Sin mantenimiento
+162661,11,3943,3,1,1,0,0,48.8,0,Sin mantenimiento
+78224,9,10396,12,2,0,1,0,28.5,1,Suspension
+166545,6,11189,3,2,1,0,1,112.4,0,Sin mantenimiento
+76226,9,10628,9,7,3,3,0,39.8,1,Revision general
+22576,9,5042,14,1,0,1,0,12.6,0,Sin mantenimiento
+53525,5,13800,21,1,0,1,0,20.2,1,Cambio de aceite
+22267,4,1298,3,0,0,0,0,13.4,0,Sin mantenimiento
+72824,9,13389,11,3,1,1,1,35.3,1,Bateria/Sistema electrico
+22683,2,2025,3,0,0,0,0,32.7,0,Sin mantenimiento
+15544,2,9846,11,0,0,0,0,27.1,0,Sin mantenimiento
+195264,7,35000,12,1,0,1,0,105.8,1,Cambio de aceite
+97543,8,19734,20,1,0,1,0,47.3,1,Cambio de aceite
+85678,7,18208,11,3,1,0,1,52.2,0,Sin mantenimiento
+45505,7,15628,23,1,0,0,1,21,1,Bateria/Sistema electrico
+55862,8,2337,4,1,1,0,0,20.2,0,Sin mantenimiento
+105858,14,2414,2,2,1,1,0,35.7,0,Sin mantenimiento
+120932,10,959,1,1,0,0,1,38.5,0,Sin mantenimiento
+42789,10,2625,9,5,0,1,4,12.6,1,Bateria/Sistema electrico
+53282,7,4091,5,2,1,0,0,31.7,0,Sin mantenimiento
+60841,7,2844,3,3,2,1,0,35.3,1,Revision general
+44281,5,5975,6,4,1,2,1,31.1,1,Bateria/Sistema electrico
+47995,7,18645,24,2,1,0,0,22.4,1,Cambio de aceite
+12405,2,12405,20,1,0,1,0,26,1,Cambio de aceite
+147857,14,719,1,2,1,0,0,31.8,0,Sin mantenimiento
+38235,3,21120,22,1,0,1,0,36.8,0,Sin mantenimiento
+190295,10,5455,5,4,0,3,0,48.8,1,Frenos
+270115,13,20207,10,7,3,2,2,63.4,1,Revision general
+81990,10,5708,8,0,0,0,0,29.8,0,Sin mantenimiento
+158357,18,7886,10,2,1,1,0,27.2,1,Suspension
+24724,1,24724,19,0,0,0,0,44.5,0,Sin mantenimiento
+80307,4,27837,18,3,1,1,0,49,1,Cambio de aceite
+93140,13,10283,15,6,1,1,1,27.6,1,Revision general
+36280,2,22049,16,2,0,2,0,54.1,1,Frenos
+57692,3,33754,18,0,0,0,0,60,1,Cambio de aceite
+194518,8,10466,5,5,2,2,1,71.2,1,Frenos
+129627,6,19765,10,3,1,2,0,93.1,1,Frenos
+63984,8,2297,3,0,0,0,0,21.7,0,Sin mantenimiento
+80668,6,17224,17,0,0,0,0,35.3,0,Sin mantenimiento
+64692,7,10855,11,3,1,1,1,35.2,1,Frenos
+43686,3,12242,16,2,0,1,0,33.2,1,Frenos
+78038,6,9012,14,0,0,0,0,24.5,0,Sin mantenimiento
+23520,4,2759,7,2,0,1,1,15.5,0,Sin mantenimiento
+84135,5,3591,4,4,1,2,1,36.8,0,Sin mantenimiento
+75243,10,16357,24,2,1,1,0,22.9,1,Cambio de aceite
+41670,2,8167,8,1,1,0,0,36.7,0,Sin mantenimiento
+1000,0,1000,3,2,1,1,0,22.6,0,Sin mantenimiento
+51719,9,5573,8,1,1,0,0,19.1,0,Sin mantenimiento
+67683,6,20540,22,0,0,0,0,39.8,1,Cambio de aceite
+122125,13,5671,7,3,0,1,0,38,1,Suspension
+59232,3,35000,24,0,0,0,0,48.1,1,Cambio de aceite
+187041,5,35000,12,0,0,0,0,116.5,1,Cambio de aceite
+60220,6,30002,21,1,1,0,0,40.8,1,Cambio de aceite
+48577,3,14571,16,0,0,0,0,45.7,1,Cambio de aceite
+31578,3,930,2,1,0,1,0,19.3,0,Sin mantenimiento
+36541,10,4547,13,2,0,0,1,17.2,0,Sin mantenimiento
+70941,2,31514,11,1,0,1,0,83.6,0,Sin mantenimiento
+24405,2,3156,5,0,0,0,0,21.1,0,Sin mantenimiento
+40397,5,7933,14,0,0,0,0,19.7,0,Sin mantenimiento
+125908,10,3030,3,4,0,2,2,34.3,0,Sin mantenimiento
+50279,4,13614,17,1,0,1,0,33.3,0,Sin mantenimiento
+26040,3,12924,20,0,0,0,0,21.3,0,Sin mantenimiento
+41662,5,1780,3,3,1,1,1,29.6,0,Sin mantenimiento
+173702,7,25707,12,2,0,1,1,68.8,1,Cambio de aceite
+20171,4,11762,16,2,1,0,0,22.5,0,Sin mantenimiento
+51299,11,1028,2,0,0,0,0,16.3,0,Sin mantenimiento
+211184,12,14976,10,4,1,2,1,58.8,1,Frenos
+78370,5,11040,7,1,1,0,0,45.9,0,Sin mantenimiento
+141124,18,806,1,8,2,2,0,24.9,1,Revision general
+27216,6,6395,20,3,1,1,1,14.7,1,Bateria/Sistema electrico
+61130,11,5883,11,4,1,2,1,23.2,1,Frenos
+80404,7,19983,19,2,0,2,0,34,1,Cambio de aceite
+152738,7,24630,15,0,0,0,0,66.5,1,Cambio de aceite
+10089,1,9426,22,0,0,0,0,19.8,0,Sin mantenimiento
+20815,2,17873,24,0,0,0,0,33.4,0,Sin mantenimiento
+49503,4,17110,15,1,0,1,0,50.7,0,Sin mantenimiento
+27591,11,2389,9,1,1,0,0,9.4,0,Sin mantenimiento
+113274,7,20689,11,3,2,0,0,61.8,1,Revision general
+39692,5,8283,20,2,0,1,1,18.3,0,Sin mantenimiento
+86188,9,14938,11,3,2,0,0,42,1,Revision general
+180703,11,12798,13,3,2,1,0,40.1,1,Suspension
+104619,6,7978,5,7,1,1,4,63.6,0,Sin mantenimiento
+90315,7,26753,24,2,1,0,1,47.4,1,Cambio de aceite
+23571,6,5095,16,2,0,1,1,9.5,0,Sin mantenimiento
+37942,5,6688,8,0,0,0,0,22.7,0,Sin mantenimiento
+36174,3,16068,15,2,0,1,1,37.8,0,Sin mantenimiento
+46807,3,6369,10,3,1,1,1,31.4,0,Sin mantenimiento
+105191,9,4404,4,2,1,1,0,45.5,0,Sin mantenimiento
+184570,11,25352,21,3,2,0,0,54,1,Cambio de aceite
+39573,5,35000,22,0,0,0,0,48.9,1,Cambio de aceite
+42543,4,13737,21,2,0,2,0,31.1,1,Frenos
+16483,1,4210,9,2,2,0,0,12.7,0,Sin mantenimiento
+10165,1,5739,7,0,0,0,0,27.2,0,Sin mantenimiento
+195107,13,2537,2,2,0,1,0,44,0,Sin mantenimiento
+12733,3,12019,18,0,0,0,0,19.2,0,Sin mantenimiento
+252336,18,7923,8,7,1,2,2,49.5,0,Sin mantenimiento
+78516,4,35000,22,0,0,0,0,57.7,1,Cambio de aceite
+14240,1,14240,21,1,1,0,0,37.5,1,Cambio de aceite
+10804,6,899,4,1,0,0,1,6.5,0,Sin mantenimiento
+69426,10,11569,23,1,0,1,0,17.3,1,Cambio de aceite
+149324,9,8138,4,6,0,3,3,98.8,0,Sin mantenimiento
+64530,10,10728,12,2,0,1,1,25.9,0,Sin mantenimiento
+4434,2,2819,12,0,0,0,0,11.8,0,Sin mantenimiento
+320000,13,34921,23,7,0,3,3,69,1,Bateria/Sistema electrico
+149914,14,19102,16,6,4,1,0,35.3,1,Revision general
+237468,14,35000,22,3,0,0,2,64.3,1,Bateria/Sistema electrico
+104718,7,21622,15,3,0,1,0,40.8,1,Cambio de aceite
+45628,4,27869,20,3,2,0,0,45,1,Cambio de aceite
+75586,4,27572,21,1,0,0,1,42.7,1,Cambio de aceite
+10549,1,10549,21,0,0,0,0,51.4,0,Sin mantenimiento
+170425,4,26830,10,2,0,1,1,122.5,1,Cambio de aceite
+11878,0,11878,10,2,1,0,0,59.7,0,Sin mantenimiento
+11194,1,7532,24,1,0,1,0,14.7,0,Sin mantenimiento
+87110,7,24674,19,1,0,0,0,44.7,0,Sin mantenimiento
+92636,5,35000,23,1,0,0,1,65.6,1,Cambio de aceite
+103031,6,23029,14,0,0,0,0,67.8,1,Cambio de aceite
+92953,9,19228,23,3,1,1,0,27.7,1,Cambio de aceite
+122070,7,35000,18,3,1,1,1,66.4,1,Cambio de aceite
+139130,7,35000,18,0,0,0,0,58.3,1,Cambio de aceite
+226842,5,25310,5,2,0,2,0,144.1,1,Frenos
+19925,3,8036,14,0,0,0,0,23.2,0,Sin mantenimiento
+30454,2,13289,18,1,0,0,1,26.5,0,Sin mantenimiento
+38411,4,11053,19,2,0,0,1,29.6,1,Cambio de aceite
+44239,5,20252,23,1,1,0,0,26.7,1,Cambio de aceite
+64816,6,4281,8,2,1,0,1,21.5,0,Sin mantenimiento
+25950,10,1814,8,2,1,0,1,7.7,0,Sin mantenimiento
+47918,5,14912,24,0,0,0,0,27.6,0,Sin mantenimiento
+149076,8,35000,24,1,0,0,1,42.9,1,Cambio de aceite
+21804,2,4564,5,2,0,2,0,26.7,0,Sin mantenimiento
+229150,7,35000,10,6,2,3,0,101.5,1,Frenos
+88568,6,16484,23,2,1,1,0,35.3,1,Cambio de aceite
+216316,13,13301,5,7,4,2,0,71.2,1,Revision general
+40642,5,18397,19,1,0,0,1,40.4,0,Sin mantenimiento
+63558,4,4147,3,4,1,2,1,55.1,0,Sin mantenimiento
+123724,9,4895,5,2,0,2,0,40.8,0,Sin mantenimiento
+46102,2,34329,19,1,0,1,0,74.3,1,Cambio de aceite
+80692,7,15943,15,2,0,1,1,36.1,1,Bateria/Sistema electrico
+36821,2,15331,14,1,0,0,1,46,0,Sin mantenimiento
+248528,17,23904,21,9,4,2,3,42.8,1,Revision general
+42177,4,7479,8,2,0,1,1,29.9,0,Sin mantenimiento
+22684,2,19642,13,1,0,0,1,43.7,1,Bateria/Sistema electrico
+166303,4,35000,15,0,0,0,0,119.6,1,Cambio de aceite
+95822,7,16396,18,1,0,0,0,30.2,1,Cambio de aceite
+67309,8,7815,8,2,0,1,1,44.1,0,Sin mantenimiento
+247804,13,35000,16,2,0,0,1,69.9,1,Cambio de aceite
+52399,3,14540,11,0,0,0,0,65.5,0,Sin mantenimiento
+110496,9,11962,14,0,0,0,0,35.2,0,Sin mantenimiento
+1655,1,1655,21,0,0,0,0,9.4,0,Sin mantenimiento
+29924,2,14655,10,0,0,0,0,46.5,0,Sin mantenimiento
+18901,2,4587,17,0,0,0,0,10.3,0,Sin mantenimiento
+76282,3,35000,23,0,0,0,0,78.6,1,Cambio de aceite
+93813,9,18794,19,3,0,0,2,38.4,1,Bateria/Sistema electrico
+41629,3,35000,24,0,0,0,0,60.7,1,Cambio de aceite
+42221,4,8868,15,1,1,0,0,21.3,0,Sin mantenimiento
+26143,7,2120,7,0,0,0,0,14.9,0,Sin mantenimiento
+72121,8,26414,24,1,0,0,0,40.4,1,Cambio de aceite
+48089,4,17064,16,3,2,0,1,34.4,1,Revision general
+24425,2,4700,6,0,0,0,0,26.7,0,Sin mantenimiento
+146569,15,6118,8,2,0,1,1,36.7,0,Sin mantenimiento
+179436,4,35000,7,4,1,2,0,160.4,1,Frenos
+71092,4,29147,21,0,0,0,0,55.4,1,Cambio de aceite
+74302,5,3695,3,2,2,0,0,62.3,0,Sin mantenimiento
+87707,8,22348,18,2,1,0,1,55.7,1,Cambio de aceite
+11606,1,11606,14,0,0,0,0,79,0,Sin mantenimiento
+199733,18,1582,2,2,1,0,0,31.5,1,Suspension
+21763,4,5426,15,1,0,1,0,11.3,0,Sin mantenimiento
+95422,9,14287,19,5,1,2,0,31.6,1,Frenos
+22842,2,22842,18,4,0,2,0,54.7,1,Cambio de aceite
+40909,6,6581,13,0,0,0,0,20.5,0,Sin mantenimiento
+160573,17,8770,9,3,1,1,0,31.8,1,Suspension
+102162,16,3243,4,3,0,1,2,23.9,1,Bateria/Sistema electrico
+210101,8,2114,1,4,1,2,1,80,0,Sin mantenimiento
+45285,3,9677,9,0,0,0,0,52.9,0,Sin mantenimiento
+176988,12,23349,16,4,2,2,0,50.1,1,Revision general
+12200,1,1843,1,0,0,0,0,49.3,0,Sin mantenimiento
+39870,3,30402,24,2,0,1,1,34.3,1,Cambio de aceite
+41110,5,13741,15,1,0,1,0,39,1,Cambio de aceite
+2634,1,2634,8,0,0,0,0,18.2,0,Sin mantenimiento
+6653,4,6488,24,0,0,0,0,10.5,0,Sin mantenimiento
+95889,9,4254,5,3,1,2,0,38,0,Sin mantenimiento
+34343,3,30291,23,1,0,1,0,41.8,1,Cambio de aceite
+155115,10,13586,7,8,3,2,3,68.1,1,Bateria/Sistema electrico
+320000,18,24259,10,5,2,1,2,83.1,1,Bateria/Sistema electrico
+170981,7,31401,11,0,0,0,0,83,1,Cambio de aceite
+40576,10,12400,24,2,1,0,1,20.2,1,Bateria/Sistema electrico
+105280,12,6360,7,3,2,0,1,28.8,1,Revision general
+42850,4,28544,24,0,0,0,0,45.6,1,Cambio de aceite
+320000,10,25699,9,3,1,1,0,140.9,1,Suspension
+78088,4,14546,7,2,0,1,0,79,0,Sin mantenimiento
+138035,7,35000,16,3,0,3,0,64.8,1,Frenos
+79576,10,13556,17,2,0,0,0,28.3,1,Cambio de aceite
+23574,3,4157,9,1,0,0,1,21.5,0,Sin mantenimiento
+18039,0,6888,4,1,0,1,0,54,0,Sin mantenimiento
+9581,3,7039,10,0,0,0,0,19.1,0,Sin mantenimiento
+72698,12,14304,13,3,0,1,1,30.7,1,Bateria/Sistema electrico
+10086,2,979,1,0,0,0,0,32.9,1,Frenos
+249102,11,4417,2,4,0,3,1,84.1,1,Frenos
+35683,3,19838,23,2,2,0,0,28.8,1,Cambio de aceite
+1000,5,313,1,1,0,1,0,9.2,0,Sin mantenimiento
+83427,6,16168,10,1,0,1,0,46.2,0,Sin mantenimiento
+16864,2,15502,19,1,0,0,0,23.8,0,Sin mantenimiento
+42601,5,7940,8,1,0,1,0,35.8,0,Sin mantenimiento
+4688,1,4688,12,0,0,0,0,33.4,0,Sin mantenimiento
+54490,4,2687,3,2,0,2,0,30.1,1,Frenos
+89266,5,24126,20,1,0,1,0,54.1,1,Cambio de aceite
+11294,0,4964,16,0,0,0,0,15.1,0,Sin mantenimiento
+19564,3,15750,21,2,0,0,0,26.3,1,Cambio de aceite
+110136,7,33510,21,3,1,1,0,51,1,Cambio de aceite
+17797,2,7837,9,1,0,0,1,25,0,Sin mantenimiento
+35764,8,485,1,2,0,0,2,14.4,0,Sin mantenimiento
+112596,8,15893,9,1,0,0,0,50.6,0,Sin mantenimiento
+81851,7,8616,4,2,2,0,0,64.9,0,Sin mantenimiento
+94500,9,14274,13,4,2,0,2,34.1,1,Bateria/Sistema electrico
+8919,1,937,4,0,0,0,0,11.9,0,Sin mantenimiento
+118341,11,35000,23,3,0,1,1,51.6,1,Cambio de aceite
+4165,2,4165,15,0,0,0,0,14,0,Sin mantenimiento
+54174,6,5969,7,5,1,4,0,41.5,1,Frenos
+113291,17,11026,23,6,1,2,2,21.5,1,Bateria/Sistema electrico
+30410,4,12059,19,1,0,1,0,18.5,0,Sin mantenimiento
+43655,6,9930,11,2,0,2,0,27.4,0,Sin mantenimiento
+18805,2,4630,4,0,0,0,0,31.6,0,Sin mantenimiento
+71453,17,8205,9,5,1,2,1,24.6,1,Frenos
+33267,3,25821,15,2,0,1,0,48.4,1,Cambio de aceite
+80573,9,11391,19,4,1,1,2,27.4,1,Bateria/Sistema electrico
+241438,12,14832,7,2,0,1,0,60,0,Sin mantenimiento
+89569,9,25440,18,4,1,1,1,40.9,1,Cambio de aceite
+73610,7,5873,7,2,0,1,1,23.8,1,Bateria/Sistema electrico
+30012,6,2900,6,0,0,0,0,21.7,0,Sin mantenimiento
+19882,2,3361,11,0,0,0,0,14.1,0,Sin mantenimiento
+215577,16,5935,4,2,0,1,0,41.1,1,Suspension
+83780,7,6517,10,1,0,1,0,28.8,0,Sin mantenimiento
+22470,6,2233,9,0,0,0,0,9.5,0,Sin mantenimiento
+7837,2,5056,7,0,0,0,0,26.1,0,Sin mantenimiento
+36012,6,8808,19,1,0,0,1,21.3,1,Bateria/Sistema electrico
+73405,5,13236,8,3,0,2,0,83.3,1,Frenos
+78389,17,8721,17,4,0,3,1,13.7,1,Frenos
+24808,6,10060,18,0,0,0,0,15.8,0,Sin mantenimiento
+88961,6,35000,16,3,1,0,2,64.4,1,Cambio de aceite
+41528,2,12722,7,1,0,1,0,73.8,0,Sin mantenimiento
+33965,3,10902,20,0,0,0,0,23.2,0,Sin mantenimiento
+74395,8,4030,6,2,0,2,0,24.7,0,Sin mantenimiento
+21946,1,9511,7,0,0,0,0,49.1,0,Sin mantenimiento
+52666,11,4006,21,1,1,0,0,9.7,1,Revision general
+52539,11,3794,9,1,1,0,0,12.6,0,Sin mantenimiento
+35368,3,19090,17,4,1,1,1,30,1,Cambio de aceite
+194356,7,4764,2,1,0,0,0,82.1,0,Sin mantenimiento
+81606,13,10943,15,6,2,1,0,27.5,1,Revision general
+75622,5,20643,21,4,2,0,1,37,1,Cambio de aceite
+90176,4,24952,18,3,1,0,2,65.3,1,Bateria/Sistema electrico
+177333,5,35000,14,6,1,3,1,111.5,1,Frenos
+51526,7,15273,21,4,1,1,1,25.5,1,Cambio de aceite
+44701,3,7566,8,0,0,0,0,34.7,0,Sin mantenimiento
+120768,4,27946,10,2,0,2,0,95.3,1,Frenos
+24883,7,1054,2,0,0,0,0,15.2,0,Sin mantenimiento
+83745,4,24663,17,5,2,2,1,61.6,1,Revision general
+19289,2,7196,18,1,1,0,0,20,0,Sin mantenimiento
+18420,1,14203,19,0,0,0,0,37,0,Sin mantenimiento
+56945,6,12082,18,0,0,0,0,30.6,0,Sin mantenimiento
+89156,12,2461,4,2,1,0,1,20.7,0,Sin mantenimiento
+37231,7,11103,16,1,0,0,1,20.4,0,Sin mantenimiento
+34404,2,27455,19,2,0,1,0,40.7,1,Cambio de aceite
+43890,3,9359,5,5,1,1,1,60.5,0,Sin mantenimiento
+50031,4,10464,12,3,2,1,0,32.6,0,Sin mantenimiento
+254976,17,17831,22,7,1,1,4,36.4,1,Bateria/Sistema electrico
+237796,18,12806,10,3,2,1,0,47.9,1,Suspension
+99397,16,9931,19,4,2,0,2,20.5,1,Bateria/Sistema electrico
+80782,6,24030,13,1,0,0,1,52.6,1,Bateria/Sistema electrico
+320000,18,24836,16,4,0,3,0,54.9,1,Frenos
+114176,3,35000,16,1,0,1,0,146.5,1,Cambio de aceite
+37579,4,11247,16,2,2,0,0,28.5,0,Sin mantenimiento
+98136,10,11349,19,1,0,1,0,27.2,1,Suspension
+109517,7,35000,22,2,1,0,0,53.4,1,Cambio de aceite
+113647,7,8965,8,1,0,0,1,54.9,0,Sin mantenimiento
+9651,2,9651,23,1,0,0,0,26.1,0,Sin mantenimiento
+48951,5,10226,16,2,1,1,0,28,0,Sin mantenimiento
+51874,3,24105,15,1,0,0,1,47.1,1,Cambio de aceite
+22355,2,5137,8,3,1,0,2,22.2,0,Sin mantenimiento
+50467,4,9451,11,0,0,0,0,27.9,0,Sin mantenimiento
+82842,7,15260,16,3,2,0,1,36.8,1,Revision general
+163258,9,11296,9,5,2,2,1,60.5,1,Revision general
+8889,1,6134,7,0,0,0,0,25.1,0,Sin mantenimiento
+21659,6,5833,20,0,0,0,0,12.7,0,Sin mantenimiento
+26598,5,2451,10,0,0,0,0,12.2,0,Sin mantenimiento
+43293,7,8350,16,2,1,0,1,17.5,1,Bateria/Sistema electrico
+11500,2,357,1,1,0,0,1,17,0,Sin mantenimiento
+25971,2,1365,2,1,0,1,0,32.1,0,Sin mantenimiento
+45245,12,12960,21,1,0,0,1,18.2,1,Bateria/Sistema electrico
+34261,3,2697,4,0,0,0,0,23.8,0,Sin mantenimiento
+45832,4,10905,20,1,0,0,1,22.9,0,Sin mantenimiento
+44940,4,15577,22,0,0,0,0,27.5,1,Cambio de aceite
+40602,3,28360,12,0,0,0,0,72.4,1,Cambio de aceite
+170155,8,22933,22,7,2,3,1,50.4,1,Frenos
+83171,7,8389,11,1,0,0,1,35.3,0,Sin mantenimiento
+33493,5,19111,23,0,0,0,0,27.2,1,Cambio de aceite
+21839,3,5035,6,2,0,1,1,27.6,0,Sin mantenimiento
+90571,5,17061,11,1,0,0,1,41.9,0,Sin mantenimiento
+102957,6,12665,10,2,2,0,0,48.3,0,Sin mantenimiento
+13525,3,8344,19,2,1,0,0,21.2,0,Sin mantenimiento
+100109,8,2084,2,2,0,2,0,35.7,0,Sin mantenimiento
+27490,11,7097,20,3,0,1,2,11.4,0,Sin mantenimiento
+150951,14,866,1,1,0,0,1,39.3,0,Sin mantenimiento
+253282,13,12540,8,3,2,1,0,53.2,1,Revision general
+42022,4,10378,15,1,0,0,1,30,0,Sin mantenimiento
+152262,6,13195,4,4,2,2,0,95.1,1,Frenos
+40990,5,8933,12,1,0,1,0,21.6,0,Sin mantenimiento
+75397,5,25782,24,2,1,0,0,39.4,1,Cambio de aceite
+68584,5,25327,20,3,0,1,1,34.3,1,Cambio de aceite
+72139,6,1230,1,3,1,0,1,33.1,0,Sin mantenimiento
+137707,12,10761,15,3,0,2,1,32.9,1,Bateria/Sistema electrico
+101963,7,14544,15,2,0,0,1,37.1,1,Bateria/Sistema electrico
+31149,2,3382,2,0,0,0,0,55.8,0,Sin mantenimiento
+224488,10,25122,16,5,1,2,1,74.7,1,Suspension
+69033,7,11992,13,1,0,1,0,35,1,Suspension
+111097,8,22548,17,1,0,1,0,54.8,1,Cambio de aceite
+36800,7,6974,8,0,0,0,0,23.8,0,Sin mantenimiento
+99999,7,10046,7,5,2,0,2,53.3,1,Bateria/Sistema electrico
+46355,7,13767,18,2,0,0,2,23,1,Bateria/Sistema electrico
+30784,1,30371,18,2,0,2,0,63.8,0,Sin mantenimiento
+261979,8,10329,4,6,0,4,0,118.1,1,Frenos
+35356,3,6880,6,4,0,1,2,32.7,0,Sin mantenimiento
+4510,4,3067,15,2,0,1,0,10.5,0,Sin mantenimiento
+48811,6,10619,20,0,0,0,0,25.9,0,Sin mantenimiento
+320000,15,8979,5,6,3,2,1,68.9,1,Revision general
+20248,2,9070,6,2,0,0,0,47.4,0,Sin mantenimiento
+85226,5,20590,20,0,0,0,0,40.1,1,Cambio de aceite
+93931,5,21443,17,5,3,2,0,61,1,Revision general
+108884,10,25350,22,6,1,3,2,45.7,1,Frenos
+100658,5,31064,19,2,1,1,0,68.4,1,Cambio de aceite
+170968,7,26159,23,0,0,0,0,58,0,Sin mantenimiento
+54558,2,11771,5,2,0,1,1,80.8,0,Sin mantenimiento
+143728,11,6446,7,5,1,2,1,42.6,1,Frenos
+35040,2,8525,6,0,0,0,0,57.6,0,Sin mantenimiento
+62249,8,1835,2,2,0,2,0,29.6,0,Sin mantenimiento
+58518,7,15550,19,3,0,2,1,25.1,1,Frenos
+131161,7,34709,16,2,1,1,0,89.5,1,Cambio de aceite
+33471,2,3007,3,1,0,1,0,39.4,1,Frenos
+75506,4,6524,5,5,1,2,1,54.5,1,Frenos
+120107,10,6879,5,3,0,2,1,37.5,0,Sin mantenimiento
+126709,17,5813,10,5,0,1,3,25.3,1,Bateria/Sistema electrico
+65379,5,8830,11,1,0,0,1,35.2,0,Sin mantenimiento
+199009,9,14848,7,6,0,2,3,77.1,1,Bateria/Sistema electrico
+84327,6,25026,23,1,0,1,0,47.5,1,Cambio de aceite
+14884,5,1829,6,2,0,0,1,13.7,0,Sin mantenimiento
+27731,4,9239,14,1,0,1,0,31.1,0,Sin mantenimiento
+167888,6,31832,11,4,2,1,1,93.3,1,Revision general
+78659,9,9496,10,2,0,0,1,31.1,0,Sin mantenimiento
+28003,9,8114,20,2,2,0,0,13,1,Revision general
+58066,2,35000,24,0,0,0,0,99.1,1,Cambio de aceite
+73361,4,1293,1,1,0,1,0,50.9,1,Frenos
+24036,2,14562,12,0,0,0,0,33.7,1,Cambio de aceite
+41828,6,2799,3,0,0,0,0,28.5,1,Suspension
+49516,4,23729,11,0,0,0,0,63.5,0,Sin mantenimiento
+65601,7,12656,15,2,1,1,0,26,1,Suspension
+184534,7,17081,10,5,1,0,3,65.8,1,Bateria/Sistema electrico
+19943,1,9279,8,0,0,0,0,47.2,0,Sin mantenimiento
+104297,6,8683,8,6,1,4,0,40,1,Frenos
+133396,12,6445,8,2,1,1,0,37.9,0,Sin mantenimiento
+44647,4,7025,8,4,1,3,0,31.8,0,Sin mantenimiento
+58995,4,11352,9,2,1,1,0,62.2,0,Sin mantenimiento
+79795,11,7235,17,2,0,1,0,21.7,1,Suspension
+45135,10,1561,3,1,0,0,1,14.3,0,Sin mantenimiento
+46587,3,1566,1,1,0,1,0,49.1,0,Sin mantenimiento
+115544,9,19067,13,2,0,0,2,49.5,0,Sin mantenimiento
+52749,3,19868,17,1,0,0,0,45.6,1,Cambio de aceite
+60385,4,9127,7,2,1,1,0,43.8,0,Sin mantenimiento
+16300,3,5215,5,1,1,0,0,29.3,1,Revision general
+31514,2,25294,15,0,0,0,0,54,0,Sin mantenimiento
+64074,6,10358,10,6,2,2,2,34.1,1,Revision general
+18364,2,13390,18,0,0,0,0,26.8,0,Sin mantenimiento
+53090,6,3033,4,0,0,0,0,29.5,0,Sin mantenimiento
+234448,6,10233,3,4,0,1,2,106.3,1,Bateria/Sistema electrico
+22149,5,7012,14,3,0,0,2,13.5,0,Sin mantenimiento
+57853,4,12507,10,0,0,0,0,46.1,0,Sin mantenimiento
+22028,3,6645,18,1,0,0,0,13.9,0,Sin mantenimiento
+14471,2,11663,13,0,0,0,0,33,0,Sin mantenimiento
+133389,14,6740,9,8,4,2,0,27.6,1,Revision general
+17803,5,1660,4,0,0,0,0,11.1,0,Sin mantenimiento
+90909,5,5587,4,2,1,1,0,43.4,0,Sin mantenimiento
+39363,3,14010,19,1,0,0,1,28.4,0,Sin mantenimiento
+46576,13,1733,6,1,0,0,1,11,0,Sin mantenimiento
+76802,4,19678,13,1,0,1,0,55.5,1,Cambio de aceite
+182425,7,31072,20,2,0,1,1,77.1,1,Cambio de aceite
+146452,8,35000,22,4,0,2,2,79.4,1,Cambio de aceite
+93069,6,10179,7,2,0,1,1,42.6,0,Sin mantenimiento
+20777,2,3381,3,1,0,0,1,35.9,0,Sin mantenimiento
+145443,9,31853,19,3,2,1,0,72.7,1,Cambio de aceite
+76191,3,35000,17,1,1,0,0,88.3,1,Cambio de aceite
+247050,10,16949,8,6,2,3,1,65.3,1,Frenos
+45720,5,7578,15,1,0,0,0,20.9,0,Sin mantenimiento
+85644,8,6004,5,4,2,1,1,39.1,0,Sin mantenimiento
+121344,12,23108,17,2,0,1,1,44.6,1,Bateria/Sistema electrico
+45978,9,8061,18,0,0,0,0,12.9,0,Sin mantenimiento
+129327,8,7956,8,3,1,2,0,45.3,1,Frenos
+320000,9,33732,12,6,0,5,0,122.2,1,Frenos
+65843,3,12652,9,4,1,1,2,49.8,1,Bateria/Sistema electrico
+247954,10,1597,1,5,1,1,3,78.7,1,Bateria/Sistema electrico
+62341,5,4177,4,1,0,1,0,38.7,0,Sin mantenimiento
+54195,5,27181,24,2,0,0,2,33.6,1,Cambio de aceite
+52567,6,10530,11,0,0,0,0,43.2,0,Sin mantenimiento
+25934,4,2483,4,0,0,0,0,22.3,0,Sin mantenimiento
+1000,2,1000,2,1,1,0,0,20.6,0,Sin mantenimiento
+135354,6,18082,9,3,1,1,1,70.2,1,Revision general
+87229,5,35000,24,3,1,0,2,74.5,1,Cambio de aceite
+35236,5,5998,10,2,1,0,1,20.3,0,Sin mantenimiento
+131216,5,32685,24,1,0,1,0,59.6,1,Cambio de aceite
+15693,1,8868,12,0,0,0,0,33.4,0,Sin mantenimiento
+73318,5,25406,19,1,0,0,1,42.2,1,Cambio de aceite
+180360,13,22804,19,4,3,1,0,45.1,1,Revision general
+320000,13,1495,1,4,2,2,0,60.5,1,Frenos
+57973,6,735,1,0,0,0,0,36.6,0,Sin mantenimiento
+150773,6,35000,23,3,1,1,1,76,1,Cambio de aceite
+1000,0,1000,23,3,0,1,0,41.5,0,Sin mantenimiento
+51671,4,6512,4,2,1,1,0,49.3,0,Sin mantenimiento
+67073,9,9340,16,1,0,0,1,22.1,0,Sin mantenimiento
+182590,4,35000,23,4,1,1,2,114.7,1,Cambio de aceite
+201043,11,24973,23,7,3,2,1,45.3,1,Revision general
+180105,11,9241,8,5,1,2,2,51.8,1,Bateria/Sistema electrico
+25487,4,8411,20,0,0,0,0,14.5,0,Sin mantenimiento
+67147,6,11405,16,2,1,0,0,22.3,1,Revision general
+253904,14,35000,23,7,3,1,2,69.1,0,Sin mantenimiento
+27914,2,4484,4,0,0,0,0,41,0,Sin mantenimiento
+22110,4,5040,15,1,0,0,0,12.2,0,Sin mantenimiento
+40923,1,1449,1,0,0,0,0,62,0,Sin mantenimiento
+36767,3,6930,9,0,0,0,0,26,0,Sin mantenimiento
+320000,17,1683,1,8,0,5,2,76.1,1,Frenos
+31775,4,10519,11,0,0,0,0,33.3,0,Sin mantenimiento
+23389,1,16876,20,0,0,0,0,39.2,0,Sin mantenimiento
+42853,2,30245,16,1,1,0,0,66.9,1,Cambio de aceite
+13416,1,4291,8,1,0,1,0,21.4,0,Sin mantenimiento
+20520,6,6164,11,2,0,2,0,20.3,0,Sin mantenimiento
+95539,7,7721,9,2,0,2,0,31.4,0,Sin mantenimiento
+179406,10,35000,18,4,0,1,3,55.2,1,Bateria/Sistema electrico
+44763,9,3337,7,2,0,0,0,16.8,0,Sin mantenimiento
+14699,2,1436,3,0,0,0,0,14,0,Sin mantenimiento
+111433,7,16865,13,2,0,0,2,55.1,1,Bateria/Sistema electrico
+33551,5,12981,20,3,1,0,1,25.1,1,Bateria/Sistema electrico
+80280,11,7058,12,2,1,0,1,28.2,1,Bateria/Sistema electrico
+21168,9,1706,5,1,0,0,0,12.6,0,Sin mantenimiento
+161903,18,1520,2,6,2,1,2,24.1,1,Bateria/Sistema electrico
+22359,3,22359,23,2,1,1,0,34.9,1,Cambio de aceite
+26442,2,26442,19,0,0,0,0,58.4,1,Cambio de aceite
+52061,4,2842,4,0,0,0,0,22.9,0,Sin mantenimiento
+126352,5,3952,2,2,0,2,0,87.1,1,Frenos
+19154,3,1938,4,1,0,0,0,24,1,Frenos
+22595,3,8113,10,1,0,1,0,24,0,Sin mantenimiento
+138499,7,35000,20,3,2,1,0,81.5,1,Cambio de aceite
+65359,4,3325,4,1,0,0,0,39.3,0,Sin mantenimiento
+39653,3,18796,20,1,0,0,1,25.8,1,Cambio de aceite
+33609,2,1184,1,5,1,3,0,32.1,0,Sin mantenimiento
+22393,1,22393,18,0,0,0,0,73.7,0,Sin mantenimiento
+245539,13,14441,7,7,3,2,1,78.4,1,Revision general
+103577,13,18492,24,1,0,1,0,22.3,1,Cambio de aceite
+96715,9,9513,12,5,0,4,1,34.2,1,Frenos
+88939,8,7010,7,2,0,0,0,36.8,0,Sin mantenimiento
+22874,4,3165,6,2,1,1,0,20.3,0,Sin mantenimiento
+65684,8,24391,20,3,1,1,1,33.9,0,Sin mantenimiento
+16221,2,12657,10,1,1,0,0,35.1,0,Sin mantenimiento
+115189,6,18409,9,1,1,0,0,65.5,1,Revision general
+39302,3,26306,18,1,0,1,0,68,1,Cambio de aceite
+45911,8,10698,13,2,0,1,1,29.2,1,Bateria/Sistema electrico
+166992,15,11906,16,5,2,1,1,31.1,1,Revision general
+31813,2,19656,11,0,0,0,0,50.4,0,Sin mantenimiento
+21674,4,1116,2,1,0,0,1,25.4,0,Sin mantenimiento
+71905,6,991,1,1,0,1,0,48.4,0,Sin mantenimiento
+13442,1,1073,1,0,0,0,0,33.3,0,Sin mantenimiento
+16905,1,7952,14,0,0,0,0,20.5,0,Sin mantenimiento
+76341,14,9299,13,2,1,1,0,20.7,1,Suspension
+150612,7,29104,18,1,0,1,0,77.6,1,Cambio de aceite
+18269,3,18269,22,1,0,1,0,32.1,1,Cambio de aceite
+163252,5,8702,5,3,2,0,0,86.3,1,Revision general
+27270,4,12141,23,0,0,0,0,26.4,0,Sin mantenimiento
+96045,6,26270,23,6,3,1,1,41.1,1,Revision general
+153526,4,35000,15,3,1,2,0,130.5,1,Cambio de aceite
+34407,5,7678,13,2,0,1,1,19.6,1,Bateria/Sistema electrico
+45184,9,1230,5,2,0,0,2,12.3,0,Sin mantenimiento
+198056,8,7151,5,9,3,5,1,71,1,Frenos
+103452,14,724,1,7,3,3,1,22.2,1,Revision general
+83797,7,12891,16,2,0,0,1,34.6,1,Cambio de aceite
+50821,6,8735,11,2,0,1,1,25.4,0,Sin mantenimiento
+163874,15,6692,5,11,4,4,2,40.6,1,Revision general
+46637,5,1707,4,0,0,0,0,20.8,0,Sin mantenimiento
+7999,1,2115,2,0,0,0,0,31.7,0,Sin mantenimiento
+126113,10,17450,16,1,0,0,1,44.8,1,Bateria/Sistema electrico
+33823,7,9060,17,3,1,1,0,20.1,1,Revision general
+46528,6,8024,16,1,1,0,0,23.8,0,Sin mantenimiento
+84032,10,3001,3,1,1,0,0,28.9,0,Sin mantenimiento
+19475,4,472,1,0,0,0,0,16,0,Sin mantenimiento
+30269,1,2379,3,1,0,1,0,27.7,0,Sin mantenimiento
+83054,10,26219,19,2,0,0,2,37.4,1,Bateria/Sistema electrico
+38173,3,12906,18,2,2,0,0,28.1,0,Sin mantenimiento
+30502,3,8570,8,2,1,0,1,30.1,0,Sin mantenimiento
+24320,1,2247,2,1,0,0,1,34.6,0,Sin mantenimiento
+63773,9,7070,8,4,1,2,0,24.4,1,Frenos
+1000,0,1000,20,0,0,0,0,51.2,1,Cambio de aceite
+293749,12,11516,4,2,0,1,0,77.1,1,Suspension
+43373,4,11858,20,1,0,0,1,27.1,1,Cambio de aceite
+84599,10,18553,12,7,2,0,3,45.7,1,Bateria/Sistema electrico
+50998,7,4170,4,0,0,0,0,30.7,0,Sin mantenimiento
+305203,17,30608,23,12,3,4,2,42.8,0,Sin mantenimiento
+137253,7,26395,13,1,0,1,0,82.8,1,Cambio de aceite
+188586,12,29022,17,3,0,1,0,46.3,1,Cambio de aceite
+11334,4,918,3,2,0,2,0,13.2,0,Sin mantenimiento
+10332,1,10332,9,1,0,1,0,44.9,0,Sin mantenimiento
+204188,11,31869,16,5,2,2,1,69,1,Revision general
+15544,1,11111,16,1,0,0,1,31,0,Sin mantenimiento
+160054,9,3934,2,2,0,1,1,60.5,0,Sin mantenimiento
+13031,2,7579,15,0,0,0,0,23.9,0,Sin mantenimiento
+24630,7,11370,23,2,1,0,0,15.5,1,Cambio de aceite
+193166,17,24992,19,1,1,0,0,37.8,1,Cambio de aceite
+21658,9,1718,5,1,0,0,0,13.3,0,Sin mantenimiento
+41993,5,21778,22,0,0,0,0,30.7,1,Cambio de aceite
+242156,8,26954,17,3,3,0,0,71,1,Revision general
+18654,4,850,2,0,0,0,0,12.2,0,Sin mantenimiento
+114563,18,2538,4,4,1,2,1,17.3,1,Frenos
+23700,3,10153,23,1,0,0,1,19.8,1,Bateria/Sistema electrico
+35839,5,6481,6,1,0,0,1,33.8,0,Sin mantenimiento
+47307,8,2456,3,2,1,0,1,28.6,0,Sin mantenimiento
+194350,7,24158,11,5,1,1,2,75.6,1,Bateria/Sistema electrico
+120441,8,24777,13,1,0,0,1,59.2,1,Cambio de aceite
+54844,4,18207,14,1,0,1,0,46,0,Sin mantenimiento
+56486,5,18387,16,1,0,1,0,37.9,1,Cambio de aceite
+109308,10,24669,24,7,5,1,1,43.5,1,Revision general
+51472,10,10892,19,3,1,1,0,21.8,1,Suspension
+121158,7,1967,1,3,1,2,0,56.1,0,Sin mantenimiento
+58991,13,1223,3,2,1,1,0,19,0,Sin mantenimiento
+139469,11,1677,1,3,0,0,2,55.4,1,Bateria/Sistema electrico
+167548,10,15334,10,5,0,3,0,67.2,1,Frenos
+22466,1,12288,9,0,0,0,0,39.3,0,Sin mantenimiento
+69322,7,21863,23,1,0,0,1,31.8,1,Cambio de aceite
+79738,6,10503,9,3,0,1,0,43.6,1,Frenos
+35012,14,300,1,2,0,1,0,7.3,0,Sin mantenimiento
+56472,5,24880,22,2,0,2,0,41.3,1,Cambio de aceite
+61829,6,8457,7,4,0,2,1,32.9,0,Sin mantenimiento
+29237,2,21466,22,1,1,0,0,34,1,Cambio de aceite
+51207,3,27414,19,2,0,1,1,51.6,1,Cambio de aceite
+142609,14,24337,22,3,0,0,2,33.6,1,Bateria/Sistema electrico
+42103,8,9842,20,5,0,1,4,18.7,1,Bateria/Sistema electrico
+132504,17,3522,4,4,2,1,0,32.4,1,Suspension
+59034,5,14858,16,1,0,0,0,36.3,1,Cambio de aceite
+35659,2,8283,10,1,0,0,1,37.3,0,Sin mantenimiento
+50041,4,19802,16,1,0,0,1,38.3,1,Cambio de aceite
+84201,4,35000,18,3,0,1,2,62,1,Cambio de aceite
+58276,9,8964,13,1,1,0,0,19.3,0,Sin mantenimiento
+85496,9,10904,8,5,1,2,1,38.6,0,Sin mantenimiento
+183859,8,35000,22,1,0,0,0,71.2,1,Cambio de aceite
+86983,18,5309,16,4,0,2,2,13.5,1,Bateria/Sistema electrico
+172223,13,26334,22,1,0,0,0,38.6,1,Cambio de aceite
+27947,3,5583,6,1,0,1,0,25.4,0,Sin mantenimiento
+127732,11,19534,21,8,2,3,2,28.5,1,Revision general
+40801,6,4836,8,1,0,1,0,21.3,0,Sin mantenimiento
+48870,5,12205,12,3,1,0,2,31.9,1,Bateria/Sistema electrico
+320000,14,35000,21,8,2,4,1,96.4,1,Frenos
+18382,3,5664,9,1,0,0,0,17.5,0,Sin mantenimiento
+48373,10,4280,7,1,0,1,0,18.4,0,Sin mantenimiento
+53087,9,10271,22,2,1,0,0,17.1,1,Revision general
+134664,3,35000,24,1,1,0,0,90.5,1,Cambio de aceite
+1000,1,1000,8,1,0,1,0,27.1,0,Sin mantenimiento
+52122,5,7014,8,0,0,0,0,34.5,0,Sin mantenimiento
+92018,12,6137,6,1,1,0,0,28,0,Sin mantenimiento
+36871,7,596,1,2,1,1,0,20.8,0,Sin mantenimiento
+172712,14,12054,14,3,0,1,1,30.8,1,Bateria/Sistema electrico
+243084,7,24402,7,1,1,0,0,135.3,1,Suspension
+275476,14,35000,21,7,4,1,1,75.3,1,Revision general
+19919,4,3159,5,1,0,0,1,21.9,0,Sin mantenimiento
+100350,8,17449,16,4,1,1,1,50,1,Revision general
+20654,4,10122,13,1,1,0,0,22.2,0,Sin mantenimiento
+25637,5,5131,15,1,0,0,1,13.2,0,Sin mantenimiento
+158114,6,5019,3,4,2,2,0,61.3,1,Frenos
+128862,7,18445,12,3,1,1,1,66.2,1,Suspension
+45245,3,29329,16,2,0,1,1,62.2,1,Cambio de aceite
+69315,8,7818,9,0,0,0,0,27,0,Sin mantenimiento
+44059,6,23712,21,3,0,1,2,31.9,1,Bateria/Sistema electrico
+30884,2,14039,13,1,0,0,0,52.9,0,Sin mantenimiento
+22708,1,14463,9,2,1,0,0,43.4,0,Sin mantenimiento
+90569,12,907,1,3,0,2,1,28.2,0,Sin mantenimiento
+28240,5,1768,5,1,0,0,1,14.4,0,Sin mantenimiento
+7251,1,7251,12,0,0,0,0,37.3,0,Sin mantenimiento
+292640,16,15732,10,7,3,2,1,63.4,1,Suspension
+37790,8,13414,21,2,0,0,1,18.1,1,Cambio de aceite
+101248,7,23382,19,1,0,1,0,49.7,1,Cambio de aceite
+37495,3,4676,4,1,0,1,0,42,1,Frenos
+30650,2,25541,15,1,1,0,0,52.9,1,Cambio de aceite
+62359,6,21889,11,1,0,0,1,56.5,1,Bateria/Sistema electrico
+43343,6,2247,3,4,0,0,3,23.9,0,Sin mantenimiento
+34467,2,7607,16,3,1,0,0,14.4,0,Sin mantenimiento
+22893,2,7675,13,0,0,0,0,26.1,0,Sin mantenimiento
+52678,2,6043,3,4,1,2,1,57.1,0,Sin mantenimiento
+28034,2,7626,12,1,0,0,1,26,1,Bateria/Sistema electrico
+32881,3,9381,18,2,0,0,0,23.9,1,Cambio de aceite
+28550,7,3812,8,2,0,1,1,12.9,0,Sin mantenimiento
+240566,8,19104,9,6,3,1,2,91.8,1,Revision general
+87903,5,3631,3,1,0,1,0,55.1,0,Sin mantenimiento
+121569,6,8223,5,3,1,1,0,53.5,0,Sin mantenimiento
+129901,8,35000,24,2,0,0,2,59.6,1,Cambio de aceite
+1000,1,1000,15,0,0,0,0,48.1,0,Sin mantenimiento
+68855,7,4639,5,1,1,0,0,30.6,0,Sin mantenimiento
+141219,13,12728,12,6,0,3,3,32,1,Bateria/Sistema electrico
+51532,5,4672,5,3,1,2,0,27.7,0,Sin mantenimiento
+320000,11,35000,11,7,1,4,0,149.1,1,Frenos
+54114,5,5612,4,2,1,0,0,47.5,0,Sin mantenimiento
+71902,9,13890,15,3,0,2,0,27.1,1,Frenos
+93288,7,14178,14,4,0,3,1,45.2,1,Frenos
+12229,2,7463,16,0,0,0,0,20.1,0,Sin mantenimiento
+76206,3,17212,11,2,1,0,1,80.1,1,Cambio de aceite
+73720,14,4930,7,1,1,0,0,24.3,0,Sin mantenimiento
+104861,10,6364,6,3,0,1,1,46.1,1,Frenos
+121567,5,12280,6,3,1,2,0,62.9,0,Sin mantenimiento
+90086,5,17517,11,0,0,0,0,43.2,0,Sin mantenimiento
+17739,3,9432,11,0,0,0,0,36.9,0,Sin mantenimiento
+61193,7,18665,17,1,0,1,0,35.2,1,Cambio de aceite
+34317,3,1582,2,0,0,0,0,33.9,0,Sin mantenimiento
+58498,4,3537,7,1,0,1,0,25.5,0,Sin mantenimiento
+30041,3,19031,21,2,1,0,1,27.3,1,Cambio de aceite
+175482,9,35000,22,2,1,1,0,79,1,Cambio de aceite
+45073,5,27712,23,1,0,1,0,33,1,Cambio de aceite
+45955,6,5292,8,3,0,2,1,22.7,0,Sin mantenimiento
+21551,2,2354,4,2,1,0,1,26.3,1,Revision general
+51152,3,8845,5,2,1,0,1,64.1,0,Sin mantenimiento
+82483,6,4700,4,3,1,2,0,50.8,0,Sin mantenimiento
+16396,1,16396,23,1,1,0,0,47.6,0,Sin mantenimiento
+44804,5,21343,22,1,0,0,0,30.4,1,Cambio de aceite
+97928,6,24604,20,3,1,1,1,48,1,Cambio de aceite
+15862,2,12824,18,0,0,0,0,24.6,0,Sin mantenimiento
+93981,11,8616,9,2,0,1,0,30.3,1,Revision general
+109442,7,24051,12,4,2,1,1,59.7,1,Revision general
+81838,5,24897,21,6,1,2,2,56.6,1,Bateria/Sistema electrico
+30313,3,8119,20,2,0,0,1,20.4,1,Bateria/Sistema electrico
+9246,1,6128,13,2,0,1,0,21.9,0,Sin mantenimiento
+56731,10,20763,21,1,0,1,0,37.2,1,Cambio de aceite
+104262,4,22711,9,4,0,3,1,90.4,1,Frenos
+7943,2,2680,10,0,0,0,0,12.2,0,Sin mantenimiento
+35153,3,23043,21,1,0,0,1,40.8,1,Cambio de aceite
+45033,8,4507,10,2,0,1,1,16.4,0,Sin mantenimiento
+57379,7,10069,19,1,1,0,0,24.7,0,Sin mantenimiento
+17583,2,11343,11,2,1,0,1,28.6,0,Sin mantenimiento
+89508,12,6729,8,3,1,1,1,27.8,0,Sin mantenimiento
+18832,2,4148,6,1,0,0,1,26.1,0,Sin mantenimiento
+166922,13,15087,15,4,0,0,1,35.1,1,Suspension
+26350,6,7871,12,0,0,0,0,26.1,0,Sin mantenimiento
+35768,4,4915,9,2,1,0,0,15.7,0,Sin mantenimiento
+83354,5,28878,18,2,1,0,0,53.7,1,Cambio de aceite
+128473,6,1504,1,1,0,1,0,53,0,Sin mantenimiento
+114295,8,5993,3,2,0,2,0,55.7,0,Sin mantenimiento
+6813,1,6813,24,0,0,0,0,15,0,Sin mantenimiento
+44433,3,22528,16,1,0,1,0,41.3,1,Cambio de aceite
+100865,6,16744,14,1,0,1,0,50.8,1,Frenos
+65782,12,442,1,2,0,1,0,19.8,0,Sin mantenimiento
+122374,12,16844,15,2,1,1,0,35.2,1,Revision general
+133298,15,10089,11,2,0,1,1,32.8,1,Bateria/Sistema electrico
+320000,11,35000,15,3,0,1,2,96.4,1,Bateria/Sistema electrico
+93516,3,3348,1,1,0,1,0,100.9,0,Sin mantenimiento
+39078,6,4868,14,2,0,1,1,14,0,Sin mantenimiento
+320000,11,35000,14,3,1,0,0,138,1,Cambio de aceite
+48898,11,4196,7,2,1,1,0,21.2,1,Revision general
+114378,5,2932,2,3,2,0,0,60,0,Sin mantenimiento
+128373,8,35000,24,5,0,3,1,59.7,1,Cambio de aceite
+18706,4,12002,18,1,0,0,0,20.2,1,Cambio de aceite
+10606,1,10606,15,1,0,1,0,45.9,0,Sin mantenimiento
+49537,5,20389,19,5,0,1,3,33,0,Sin mantenimiento
+66494,5,23154,17,4,0,2,1,47.5,1,Cambio de aceite
+41842,4,5139,4,0,0,0,0,39.7,1,Frenos
+157265,8,17507,11,0,0,0,0,67.6,1,Cambio de aceite
+57951,5,26325,22,2,1,0,0,36.5,1,Cambio de aceite
+51873,7,7232,7,2,0,1,1,31.9,0,Sin mantenimiento
+158897,9,35000,24,2,1,1,0,64,1,Cambio de aceite
+256045,18,2842,2,3,0,2,1,48.2,0,Sin mantenimiento
+99822,5,14613,8,2,0,2,0,52.3,1,Frenos
+89126,12,5244,9,3,1,1,0,24.3,1,Suspension
+33724,7,9675,15,2,0,1,1,19.7,1,Bateria/Sistema electrico
+61377,7,4696,5,2,1,1,0,25.6,0,Sin mantenimiento
+61622,5,5238,6,0,0,0,0,24.9,0,Sin mantenimiento
+108340,6,23064,16,4,2,1,1,53.9,1,Revision general
+76218,5,12752,7,1,1,0,0,59.9,0,Sin mantenimiento
+115599,11,26409,22,6,2,2,2,32.1,1,Bateria/Sistema electrico
+59266,3,35000,21,4,0,3,0,76.9,1,Cambio de aceite
+34537,1,12820,8,2,1,1,0,74.3,0,Sin mantenimiento
+34977,4,11382,14,0,0,0,0,40,0,Sin mantenimiento
+22736,3,6009,8,2,1,1,0,22.3,0,Sin mantenimiento
+71877,4,20323,9,7,2,2,2,83.2,1,Revision general
+31560,5,13776,17,1,1,0,0,33.8,1,Cambio de aceite
+43306,4,7731,8,2,0,1,1,37.5,0,Sin mantenimiento
+39170,5,3848,4,1,0,0,1,29,0,Sin mantenimiento
+29849,4,4186,7,3,1,1,0,21.5,0,Sin mantenimiento
+17179,7,12610,23,3,1,0,2,15.6,1,Bateria/Sistema electrico
+300416,18,11357,7,2,0,1,1,49.6,1,Suspension
+39087,6,7582,9,2,0,1,1,22.7,0,Sin mantenimiento
+282616,4,35000,16,5,0,3,1,180,1,Frenos
+1000,0,1000,3,0,0,0,0,19.3,0,Sin mantenimiento
+75298,18,3848,7,3,0,1,2,17.5,1,Bateria/Sistema electrico
+98953,7,4603,5,2,1,1,0,46.3,0,Sin mantenimiento
+157651,5,35000,23,4,0,3,1,81.2,1,Cambio de aceite
+25570,0,20184,23,0,0,0,0,36.3,0,Sin mantenimiento
+81802,5,28665,19,1,0,1,0,47.9,1,Cambio de aceite
+18455,6,2650,6,0,0,0,0,12.7,0,Sin mantenimiento
+27940,4,8097,15,1,0,1,0,24.1,0,Sin mantenimiento
+5469,2,5469,16,1,0,0,0,19.4,0,Sin mantenimiento
+1888,2,1888,21,0,0,0,0,12.3,0,Sin mantenimiento
+138820,18,4099,4,8,0,5,2,37.3,1,Frenos
+20738,6,5137,18,3,0,2,0,10.2,0,Sin mantenimiento
+26383,4,2219,5,0,0,0,0,16.9,0,Sin mantenimiento
+56458,6,10960,14,0,0,0,0,26,0,Sin mantenimiento
+31779,5,17532,22,1,0,0,1,22.2,1,Cambio de aceite
+23598,2,2210,2,0,0,0,0,43.5,0,Sin mantenimiento
+107276,10,4957,4,2,1,1,0,41.4,0,Sin mantenimiento
+111862,5,35000,20,2,0,1,0,57.2,1,Cambio de aceite
+97039,6,1769,1,3,2,1,0,52.9,0,Sin mantenimiento
+320000,14,22546,17,4,1,1,2,65.5,1,Bateria/Sistema electrico
+24912,2,16576,13,3,1,2,0,35,1,Frenos
+38289,3,7571,9,0,0,0,0,41.4,0,Sin mantenimiento
+80398,7,29309,21,1,0,0,1,46.4,1,Cambio de aceite
+114729,10,23723,21,1,0,0,0,37.8,1,Cambio de aceite
+26532,3,7574,8,2,1,1,0,28.1,0,Sin mantenimiento
+41510,4,646,1,0,0,0,0,29.2,0,Sin mantenimiento
+51856,9,2030,4,3,1,0,1,22.3,0,Sin mantenimiento
+155321,18,4374,3,4,0,1,2,44.1,1,Bateria/Sistema electrico
+30039,6,17701,24,1,1,0,0,33.2,1,Cambio de aceite
+15424,3,10189,15,1,1,0,0,24.3,0,Sin mantenimiento
+14644,2,13504,17,0,0,0,0,24.3,0,Sin mantenimiento
+21576,5,3370,6,0,0,0,0,18,0,Sin mantenimiento
+132106,10,29328,21,1,0,1,0,60,0,Sin mantenimiento
+269875,18,16427,18,4,1,1,1,36.5,1,Suspension
+28718,4,15284,19,2,1,1,0,21.8,1,Cambio de aceite
+101292,6,18068,12,7,3,2,1,54.6,1,Revision general
+122998,16,8875,17,3,1,1,1,25.7,1,Bateria/Sistema electrico
+42048,7,5302,14,5,3,1,1,16.1,0,Sin mantenimiento
+89301,7,15751,10,4,3,1,0,61.4,1,Revision general
+105182,14,14648,15,3,2,0,1,26,1,Revision general
+51641,6,5579,8,3,1,1,1,28,0,Sin mantenimiento
+43740,2,16448,23,2,0,2,0,35.8,1,Frenos
+161321,12,33934,18,2,0,1,0,65.6,1,Cambio de aceite
+6175,1,6175,18,0,0,0,0,35.4,0,Sin mantenimiento
+45990,11,7960,18,1,0,0,1,18.1,0,Sin mantenimiento
+60215,6,19400,11,1,1,0,0,47.2,1,Cambio de aceite
+38568,4,19842,23,1,1,0,0,26.8,1,Cambio de aceite
+174489,4,10090,5,2,0,2,0,98.9,1,Frenos
+52431,5,13504,14,2,1,1,0,35,0,Sin mantenimiento
+5883,4,463,2,1,0,0,0,10.2,0,Sin mantenimiento
+69357,8,7400,8,3,2,1,0,42.6,1,Revision general
+116047,4,35000,14,3,2,0,1,102,1,Cambio de aceite
+125910,6,28581,12,2,0,2,0,83.3,1,Cambio de aceite
+28274,1,28274,23,0,0,0,0,95.8,0,Sin mantenimiento
+42639,6,10655,15,0,0,0,0,20,0,Sin mantenimiento
+82971,4,13838,10,3,1,2,0,57.8,1,Frenos
+74065,10,9347,11,4,0,2,0,23.5,1,Frenos
+63504,5,17119,15,0,0,0,0,39.6,0,Sin mantenimiento
+40776,9,7977,19,2,0,2,0,17.4,1,Frenos
+67304,9,5968,7,0,0,0,0,24.6,0,Sin mantenimiento
+57078,9,7289,15,4,1,1,1,24.1,1,Bateria/Sistema electrico
+109409,5,23752,14,1,0,1,0,57.4,1,Cambio de aceite
+121291,6,1766,1,1,0,0,0,54.4,0,Sin mantenimiento
+64795,7,22003,22,0,0,0,0,40.8,1,Cambio de aceite
+35548,6,8170,14,3,2,1,0,16.7,0,Sin mantenimiento
+47866,5,4215,6,1,0,1,0,29.5,0,Sin mantenimiento
+25320,3,12861,16,0,0,0,0,23.2,0,Sin mantenimiento
+110023,6,20076,17,3,1,1,0,56.5,1,Cambio de aceite
+37542,1,32942,22,1,0,1,0,66.9,1,Cambio de aceite
+30586,1,1649,1,1,1,0,0,62.6,0,Sin mantenimiento
+16524,2,8057,10,1,0,0,1,23.1,0,Sin mantenimiento
+21049,9,857,5,1,0,1,0,7.8,0,Sin mantenimiento
+39686,7,6537,14,2,1,0,0,13.2,0,Sin mantenimiento
+208195,9,23504,13,2,1,1,0,76.5,1,Cambio de aceite
+34206,3,9312,12,0,0,0,0,28.1,0,Sin mantenimiento
+92883,11,14368,24,3,1,2,0,23.2,1,Frenos
+57944,2,24286,13,0,0,0,0,86.4,0,Sin mantenimiento
+38819,2,25617,10,1,1,0,0,70.2,0,Sin mantenimiento
+95150,11,1943,2,4,1,1,1,35.5,1,Bateria/Sistema electrico
+57916,6,6656,7,3,2,0,0,29.8,0,Sin mantenimiento
+108429,9,21377,22,4,2,1,1,32.5,1,Revision general
+96440,7,12446,11,4,0,0,2,39.7,1,Bateria/Sistema electrico
+136573,4,35000,22,2,2,0,0,84.4,1,Cambio de aceite
+22463,2,20475,13,2,0,1,1,44.2,0,Sin mantenimiento
+19509,1,19509,14,0,0,0,0,52.2,0,Sin mantenimiento
+320000,17,21302,11,5,2,0,1,66.6,1,Suspension
+17366,1,8012,14,0,0,0,0,18.4,1,Cambio de aceite
+310717,14,3225,2,8,1,2,3,53,1,Bateria/Sistema electrico
+54612,6,1625,2,1,1,0,0,29.8,1,Revision general
+8265,7,3236,12,4,0,0,3,8.8,0,Sin mantenimiento
+31507,6,4476,15,0,0,0,0,10.9,0,Sin mantenimiento
+46284,8,9275,14,0,0,0,0,20,0,Sin mantenimiento
+39357,3,19048,11,2,1,0,1,46.9,0,Sin mantenimiento
+2873,1,2873,8,0,0,0,0,37.3,0,Sin mantenimiento
+47683,4,23896,18,2,0,1,0,38.7,1,Cambio de aceite
+192143,8,35000,15,5,2,2,1,102.3,1,Cambio de aceite
+12937,2,1149,2,0,0,0,0,17.4,0,Sin mantenimiento
+147037,11,8610,11,3,0,1,0,34.5,1,Frenos
+71932,5,20946,18,1,0,0,0,41.4,1,Cambio de aceite
+13635,2,10704,19,1,0,0,0,23.3,0,Sin mantenimiento
+58196,6,4868,7,2,2,0,0,35.5,0,Sin mantenimiento
+33492,8,12322,23,2,0,1,1,14.5,1,Cambio de aceite
+139918,8,35000,16,0,0,0,0,76,1,Cambio de aceite
+56436,11,7607,11,1,0,0,0,24.1,0,Sin mantenimiento
+29267,1,29267,16,0,0,0,0,107,0,Sin mantenimiento
+92193,11,23085,21,5,0,3,1,34.4,1,Frenos
+146716,12,10101,6,2,1,1,0,61.6,1,Suspension
+15330,2,4617,4,1,1,0,0,34,0,Sin mantenimiento
+32461,2,14192,11,1,0,1,0,34.4,0,Sin mantenimiento
+73563,9,1963,3,3,0,0,2,25.4,0,Sin mantenimiento
+38598,4,18755,21,2,1,0,1,37.4,1,Bateria/Sistema electrico
+164327,13,24326,24,3,0,1,1,41.7,1,Cambio de aceite
+109365,15,7224,15,5,2,3,0,22.7,1,Revision general
+26567,2,20853,24,0,0,0,0,32.7,1,Cambio de aceite
+37523,3,992,2,0,0,0,0,25,0,Sin mantenimiento
+245484,6,35000,16,7,2,3,1,124,1,Frenos
+19228,1,8938,11,0,0,0,0,33.3,0,Sin mantenimiento
+28459,1,12826,7,1,0,1,0,81.9,0,Sin mantenimiento
+17895,3,8217,8,1,1,0,0,31.4,0,Sin mantenimiento
+167121,18,12094,14,2,0,2,0,40.4,1,Suspension
+23077,7,9500,16,3,1,0,1,16.9,1,Revision general
+28331,3,2571,4,0,0,0,0,27.4,0,Sin mantenimiento
+24946,2,12646,15,0,0,0,0,39.3,0,Sin mantenimiento
+58910,2,35000,23,0,0,0,0,83.7,1,Cambio de aceite
+57626,4,1280,1,1,0,0,1,39.5,0,Sin mantenimiento
+62859,3,35000,22,0,0,0,0,74.9,0,Sin mantenimiento
+69069,5,21412,15,2,1,0,0,49.8,1,Cambio de aceite
+158258,8,16583,9,4,1,2,0,85.7,0,Sin mantenimiento
+46267,5,22709,18,0,0,0,0,33.9,0,Sin mantenimiento
+318734,10,35000,15,4,2,1,0,130.3,1,Suspension
+42288,4,13705,19,0,0,0,0,26.8,0,Sin mantenimiento
+102571,16,1599,2,5,3,1,1,23,1,Revision general
+58259,9,860,2,1,0,0,0,18,0,Sin mantenimiento
+249183,7,35000,16,3,1,0,1,126.1,1,Cambio de aceite
+113784,8,14964,8,4,1,1,1,54.9,1,Revision general
+23391,4,4267,6,1,0,1,0,29.1,0,Sin mantenimiento
+107369,5,14962,11,3,0,2,1,69.6,1,Frenos
+71768,4,25016,18,1,0,0,1,51.1,0,Sin mantenimiento
+93213,3,10179,5,1,0,0,1,103.2,0,Sin mantenimiento
+20413,2,12864,24,1,0,1,0,14.9,0,Sin mantenimiento
+95738,8,10332,11,1,1,0,0,30.2,1,Suspension
+73494,11,3256,4,1,0,0,1,27.1,0,Sin mantenimiento
+15459,7,547,2,2,1,0,0,11.8,0,Sin mantenimiento
+105842,5,35000,21,1,0,0,1,62.7,1,Cambio de aceite
+127297,18,2868,3,3,1,1,1,30.2,1,Bateria/Sistema electrico
+62756,3,11906,11,1,1,0,0,52.6,0,Sin mantenimiento
+284806,7,35000,17,5,2,3,0,128.2,1,Frenos
+99743,12,11213,13,3,0,2,0,28.8,1,Frenos
+13155,2,6562,7,0,0,0,0,27.8,0,Sin mantenimiento
+146280,9,2716,3,4,0,3,0,37.4,1,Frenos
+291488,16,23526,18,6,1,3,0,60.2,1,Frenos
+44827,6,9885,12,0,0,0,0,25.6,0,Sin mantenimiento
+53797,6,1672,2,3,0,1,1,24.7,0,Sin mantenimiento
